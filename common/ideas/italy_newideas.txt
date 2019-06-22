@@ -12,8 +12,6 @@ ideas = {
 
 			removal_cost = -1
 			
-			picture = generic_spy_political
-			
 			modifier = {
 				stability_factor = -0.1
 				political_power_gain = -0.5 
@@ -21,6 +19,34 @@ ideas = {
 				trade_laws_cost_factor = 0.25 
 				mobilization_laws_cost_factor = 0.25 
 				economy_cost_factor = 0.15 
+			}
+		}
+		
+		victor_emmanuel_versailles = {
+			
+			
+			allowed = {
+				original_tag = "ITA"
+			}
+
+			allowed_civil_war = {
+				NOT = {
+					has_government = communism
+				}
+				NOT = {
+					any_other_country = {
+						original_tag = ITA
+						has_government = fascism
+					}
+				}
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+                war_support_factor = 0.05
+                political_power_gain = 0.25				
 			}
 		}
 		
@@ -515,6 +541,182 @@ ideas = {
 				navy_capital_ship_attack_factor = 0.05
 				spotting_chance = 0.1
 				convoy_escort_efficiency = 0.25
+			}
+	    }
+		
+		ita_keep_loyalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = -0.05
+			   stability_factor = -0.05
+			   political_power_factor = 0.15	
+			}
+	    }
+		
+		
+		ita_got_rid_of_loyalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = 0.05
+			   stability_factor = 0.05
+			   political_power_factor = -0.15
+			   military_leader_cost_factor = -0.25
+			}
+	    }
+		
+		ita_banished_royalists = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   fascism_drift = 0.05
+			   political_power_factor = 0.15
+			   monarchist_drift = -0.05
+			}
+	    }
+		
+		ita_committe_disbanded = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_factor = 0.15
+			   stability_factor = 0.05
+			   political_advisor_cost_factor = -0.10	
+			   justify_war_goal_time = -0.15
+			}
+	    }
+		
+		ita_fascist_legions = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_factor = 0.05
+			   conscription_factor = 0.1
+			}
+	    }
+		
+		ita_silence_mafia = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_factor = 0.05
+			   stability_factor = 0.05
+			   industrial_capacity_factory = 0.1
+			   consumer_goods_factor = -0.03
+			}
+	    }
+		
+		ita_pregnancy_support = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   conscription_factor = 0.10
+			   MONTHLY_POPULATION = 0.05
+			}
+	    }
+		
+		ita_italian_movies = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_gain = 0.15
+			   consumer_goods_factor = -0.02
+			}
+	    }
+		
+		ita_nation_reborn = {     
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+			   political_power_gain = 0.15
+			   stability_factor = 0.15
+			   war_support_factor = 0.10
+			   send_volunteer_size = 3
+			   fascism_drift = 0.10
+			   	army_core_attack_factor = 0.05
+				experience_gain_army_factor = 0.1
 			}
 	    }
     }
