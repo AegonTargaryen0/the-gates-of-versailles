@@ -12,7 +12,7 @@ tag = ITA
 
     focus = {
 		id = ITA_rebuild_economy
-		icon = GFX_ITA_rebuild_economy
+		icon = GFX_focus_generic_industry_2
 		x = 5
 		y = 0
 		cost = 10
@@ -570,10 +570,6 @@ tag = ITA
 	unlock_decision_tooltip = ITA_teach_napoleonic_strategy
 	unlock_decision_tooltip = ITA_hire_vittorio_ambrosio
 	unlock_decision_tooltip = ITA_hire_mario_roatta
-	hidden_effect = {
-	unlock_decision_tooltip = ITA_remove_napoleonic_straegy_teachings
-	unlock_decision_tooltip = ITA_remove_improved_officer_classes
-	}
 	
 	}
 	
@@ -1165,5 +1161,687 @@ tag = ITA
 			}
     }
 	}
-   
+	
+#Political Tree
+
+    focus = {
+		id = ITA_the_future_of_italy
+		icon = GFX_focus_generic_italy_first
+		x = 40
+		y = 0
+		cost = 5
+		completion_reward = {
+        add_political_power = 100
+    }
+	}
+	
+	focus = {
+		id = ITA_strenghten_mussolinis_power
+		icon = GFX_goal_ita_support_mussolini
+		prerequisite = { focus = ITA_the_future_of_italy }
+		x = 31
+		y = 1
+		cost = 2
+		completion_reward = {
+        add_political_power = 50
+		add_popularity = {
+        ideology = fascism
+        popularity = 0.1
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_the_fate_of_loyalists
+		icon = GFX_goal_ita_fate_of_loyalists
+		prerequisite = { focus = ITA_strenghten_mussolinis_power }
+		x = 31
+		y = 2
+		cost = 5
+		completion_reward = {
+        ITA = {
+			country_event = { id = italy.26 hours = 3 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_stick_with_austria
+		icon = GFX_goal_ita_stick_with_austria
+		prerequisite = { focus = ITA_the_fate_of_loyalists }
+		x = 31
+		y = 3
+		cost = 1
+		completion_reward = {
+        add_stability = 0.05
+    }
+	}
+	
+	focus = {
+		id = ITA_destroy_the_croats
+		icon = GFX_goal_ita_partition_croatia
+		prerequisite = { focus = ITA_stick_with_austria }
+		mutually_exclusive = { focus = ITA_alliance_with_croatia }
+		available = {
+		country_exists = CRO
+		}
+		x = 30
+		y = 4
+		cost = 10
+		completion_reward = {
+        declare_war_on = {
+        target = CRO
+        type = annex_everything
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_alliance_with_croatia
+		icon = GFX_goal_ita_alliance_with_croatia
+		prerequisite = { focus = ITA_stick_with_austria }
+		mutually_exclusive = { focus = ITA_destroy_the_croats }
+		available = {
+		CRO = { is_in_faction = no }
+		country_exists = CRO
+		}
+		x = 32
+		y = 4
+		cost = 10
+		completion_reward = {
+        CRO = {
+			country_event = { id = italy.28 hours = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_execute_garibaldi
+		icon = GFX_goal_ita_execute_royalists
+		prerequisite = { focus = ITA_destroy_the_croats focus = ITA_alliance_with_croatia }
+		available = {
+		has_capitulated = no
+		}
+		x = 31
+		y = 5
+		cost = 5
+		completion_reward = {
+        add_ideas = ita_banished_royalists
+		add_popularity = {
+        ideology = monarchist
+        popularity = -0.15
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_abolish_the_fascist_committee
+		icon = GFX_goal_ita_abolish_comittee
+		prerequisite = { focus = ITA_execute_garibaldi }
+		mutually_exclusive { focus = ITA_new_duce }
+		available = {
+		has_capitulated = no
+		}
+		x = 27
+		y = 6
+		cost = 2
+		completion_reward = {
+        add_ideas = ita_committe_disbanded
+		hidden_effect = {
+		set_country_flag = ITA_mussolini_kept
+    }
+	}
+	}
+	
+	focus = {
+		id = ITA_mussolini_legions
+		icon = GFX_goal_ita_il_duce_legions
+		prerequisite = { focus = ITA_abolish_the_fascist_committee focus = ITA_new_duce }
+		available = {
+		has_capitulated = no
+		}
+		x = 31
+		y = 7
+		cost = 10
+		completion_reward = {
+        add_ideas = ita_fascist_legions
+    }
+	}
+	
+	focus = {
+		id = ITA_il_duces_right
+		icon = GFX_goal_ita_il_duce_right
+		prerequisite = { focus = ITA_mussolini_legions }
+		bypass = {
+		has_country_flag = ita_balbo_in_power
+		}
+		x = 31
+		y = 8
+		cost = 10
+		completion_reward = {
+		custom_effect_tooltip = il_duces_right_tt
+		hidden_effect = {
+        if= {
+			limit = {
+				has_country_flag = ITA_mussolini_kept
+			}
+			create_field_marshal = {
+	        name = "Benito Mussolini"
+	        picture = "Portrait_ItalianConfederation_Benito_Mussolini.dds"
+	        traits = { defensive_doctrine media_personality }
+	        skill = 2
+	        attack_skill = 2
+	        defense_skill = 1
+	        planning_skill = 1
+	        logistics_skill = 5
+        }
+		}
+		if= {
+			limit = {
+				has_country_flag = ita_federzoni_in_power
+			}
+			create_field_marshal = {
+	        name = "Luigi Federzoni"
+	        picture = "Portrait_ITA_Luigi_Federzoni.dds"
+	        traits = { offensive_doctrine media_personality }
+	        skill = 1
+	        attack_skill = 1
+	        defense_skill = 3
+	        planning_skill = 2
+	        logistics_skill = 2
+        }
+		}
+		if= {
+			limit = {
+				has_country_flag = ita_ciano_in_power
+			}
+			create_field_marshal = {
+	        name = "Galeazzo Ciano"
+	        picture = "Portrait_ITA_Galeazzo_Ciano.dds"
+	        traits = { offensive_doctrine media_personality }
+	        skill = 3
+	        attack_skill = 4
+	        defense_skill = 2
+	        planning_skill = 1
+	        logistics_skill = 1
+        }
+		}
+    }
+	}
+	}
+	
+	focus = {
+		id = ITA_expansion_of_the_pact
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = ITA_il_duces_right }
+		x = 27
+		y = 9
+		cost = 1
+		completion_reward = {
+        add_political_power = 15
+    }
+	}
+	
+	focus = {
+		id = ITA_agressive_expansion
+		icon = GFX_focus_generic_strike_at_democracy1
+		mutually_exclusive = { focus = ITA_diplomatic_expansion }
+		prerequisite = { focus = ITA_expansion_of_the_pact }
+		x = 26
+		y = 10
+		cost = 1
+		completion_reward = {
+        add_political_power = 5
+    }
+	}
+	
+	focus = {
+		id = ITA_invade_serbia
+		icon = GFX_goal_ita_invade_serbia
+		prerequisite = { focus = ITA_agressive_expansion }
+		x = 26
+		y = 11
+		cost = 8
+		completion_reward = {
+        create_wargoal = {
+        type = puppet_wargoal_focus
+        target = YUG
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_occupy_albania
+		icon = GFX_goal_ita_occupy_albania
+		prerequisite = { focus = ITA_invade_serbia }
+		x = 26
+		y = 12
+		cost = 8
+		completion_reward = {
+        ALB = {
+			country_event = { id = italy.31 hours = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_partition_switzerland
+		icon = GFX_goal_ita_parition_switzerland
+		prerequisite = { focus = ITA_occupy_albania }
+		available = {
+		FRA = { has_war = no }
+		has_war = no
+		}
+		x = 26
+		y = 13
+		cost = 10
+		completion_reward = {
+        FRA = {
+			country_event = { id = italy.34 hours = 1 }
+		}
+		hidden_effect = {
+		clr_country_flag = ita_federzoni_in_power
+		clr_country_flag = ita_balbo_in_power
+		clr_country_flag = ita_ciano_in_power
+		clr_country_flag = ITA_mussolini_kept
+    }
+	}
+	}
+	
+	focus = {
+		id = ITA_diplomatic_expansion
+		icon = GFX_goal_generic_major_alliance
+		mutually_exclusive = { focus = ITA_agressive_expansion }
+		prerequisite = { focus = ITA_expansion_of_the_pact }
+		x = 28
+		y = 10
+		cost = 1
+		completion_reward = {
+        add_political_power = -15
+    }
+	}
+	
+	focus = {
+		id = ITA_alliance_with_spain
+		icon = GFX_goal_ita_spanish_alliance
+		prerequisite = { focus = ITA_diplomatic_expansion }
+		available = {
+		SPR = { is_in_faction = no }
+		is_faction_leader = yes
+		country_exists = SPR
+		SPR = { is_puppet = no }
+		is_subject = no
+		}
+		x = 28
+		y = 11
+		cost = 10
+		completion_reward = {
+        SPR = {
+			country_event = { id = italy.40 hours = 1 }
+		}
+    }
+	}
+	
+	
+	focus = {
+		id = ITA_alliance_with_turkey
+		icon = GFX_goal_ita_turkish_alliance
+		prerequisite = { focus = ITA_alliance_with_spain }
+		available = {
+		TUR = { is_in_faction = no }
+		is_faction_leader = yes
+		country_exists = TUR
+		SPR = { is_puppet = TUR }
+		is_subject = no
+		}
+		x = 28
+		y = 12
+		cost = 10
+		completion_reward = {
+        TUR = {
+			country_event = { id = italy.43 hours = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_demand_istria
+		icon = GFX_goal_ita_seize_istria
+		prerequisite = { focus = ITA_alliance_with_turkey }
+		available = {
+		AUS = { has_war = no }
+		}
+		x = 28
+		y = 13
+		cost = 10
+		completion_reward = {
+        AUS = {
+			country_event = { id = italy.46 hours = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_new_duce
+		icon = GFX_goal_ita_new_duce
+		prerequisite = { focus = ITA_execute_garibaldi }
+		mutually_exclusive = { focus = ITA_abolish_the_fascist_committee }
+		x = 35
+		y = 6
+		cost = 2
+		completion_reward = {
+        ITA = {
+			country_event = { id = italy.27 hours = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_silence_the_mafia
+		icon = GFX_goal_ita_silence_the_mafia
+		prerequisite = { focus = ITA_il_duces_right }
+		available = {
+		has_capitulated = no
+		}
+		x = 31
+		y = 9
+		cost = 5
+		completion_reward = {
+        add_ideas = ita_silence_mafia
+		add_political_power = 10
+    }
+	}
+	
+	focus = {
+		id = ITA_promote_pregnancy
+		icon = GFX_goal_ita_promote_pregnancy
+		prerequisite = { focus = ITA_silence_the_mafia }
+		available = {
+		has_capitulated = no
+		}
+		x = 31
+		y = 11
+		cost = 5
+		completion_reward = {
+        add_ideas = ita_pregnancy_support
+    }
+	}
+	
+	focus = {
+		id = ITA_claim_savoy
+		icon = GFX_goal_ita_savoy_claims
+		prerequisite = { focus = ITA_promote_pregnancy }
+		available = {
+		has_capitulated = no
+		}
+		x = 31
+		y = 13
+		cost = 5
+		completion_reward = {
+        add_state_claim = 735
+    }
+	}
+	
+	focus = {
+		id = ITA_expand_colonial_empire
+		icon = GFX_goal_ita_expand_colonial_empire
+		prerequisite = { focus = ITA_il_duces_right }
+		available = {
+		has_capitulated = no
+		}
+		x = 35
+		y = 9
+		cost = 5
+		completion_reward = {
+        add_political_power = 20
+		add_war_support = 0.01
+    }
+	}
+	
+	focus = {
+		id = ITA_invade_ethiopia
+		icon = GFX_goal_ita_invade_ethiopia
+		prerequisite = { focus = ITA_expand_colonial_empire }
+		x = 35
+		y = 10
+		cost = 7
+		completion_reward = {
+        create_wargoal = {
+        type = puppet_wargoal_focus
+        target = SAU
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_treaty_of_aden
+		icon = GFX_goal_ita_treaty_of_aden
+		prerequisite = { focus = ITA_invade_ethiopia }
+		x = 35
+		y = 11
+		cost = 10
+		completion_reward = {
+        YEM = {
+			country_event = { id = italy.49 hours = 2 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_invade_arabia
+		icon = GFX_goal_ita_invade_saudi_arabia
+		prerequisite = { focus = ITA_treaty_of_aden }
+		available = {
+		OR = {
+		YEM = { is_puppet_of = ITA }
+		NOT = { country_exists = YEM }
+		}
+		}
+		x = 37
+		y = 12
+		cost = 10
+		completion_reward = {
+        create_wargoal = {
+        type = puppet_wargoal_focus
+        target = SAU
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_invade_oman
+		icon = GFX_goal_ita_invade_oman
+		prerequisite = { focus = ITA_treaty_of_aden }
+		available = {
+		OR = {
+		YEM = { is_puppet_of = ITA }
+		NOT = { country_exists = YEM }
+		}
+		}
+		x = 33
+		y = 12
+		cost = 7
+		completion_reward = {
+        create_wargoal = {
+        type = puppet_wargoal_focus
+        target = OMA
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_invade_iraq
+		icon = GFX_goal_ita_invade_iraq
+		prerequisite = { focus = ITA_invade_ethiopia }
+		available = {
+		OR = {
+		YEM = { is_puppet_of = ITA }
+		NOT = { country_exists = YEM }
+		}
+		}
+		x = 35
+		y = 12
+		cost = 7
+		completion_reward = {
+        create_wargoal = {
+        type = puppet_wargoal_focus
+        target = IRQ
+    }
+    }
+	}
+	
+	focus = {
+		id = ITA_form_the_italian_middle_east
+		icon = GFX_goal_ita_middle_east
+		prerequisite = { focus = ITA_invade_iraq }
+		prerequisite = { focus = ITA_invade_oman }
+		prerequisite = { focus = ITA_invade_arabia }
+		available = {
+		OR = {
+		YEM = { is_puppet_of = ITA }
+		owns_state = 810
+		owns_state = 293
+		}
+		owns_state = 809
+		owns_state = 678
+		owns_state = 679
+		owns_state = 292
+		owns_state = 675
+		owns_state = 293
+		owns_state = 810
+		owns_state = 809
+		owns_state = 678
+		owns_state = 679
+		owns_state = 292
+		owns_state = 837
+		owns_state = 675
+		owns_state = 291
+		owns_state = 863
+		owns_state = 676
+		owns_state = 658
+		owns_state = 872
+		}
+		x = 35
+		y = 13
+		cost = 1
+		completion_reward = {
+        custom_effect_tooltip = italian_middle_east_tt
+		hidden_effect = {
+		MIT = { transfer_state = 293 }
+		MIT = { transfer_state = 658 }
+		MIT = { transfer_state = 872 }
+		MIT = { transfer_state = 291 }
+		MIT = { transfer_state = 863 }
+		MIT = { transfer_state = 676 }
+		MIT = { transfer_state = 294 }
+		MIT = { transfer_state = 810 }
+		MIT = { transfer_state = 809 }
+		MIT = { transfer_state = 678 }
+		MIT = { transfer_state = 679 }
+		MIT = { transfer_state = 292 }
+		MIT = { transfer_state = 837 }
+		MIT = { transfer_state = 675 }
+		MIT = {	add_state_core = 293 }
+		MIT = { add_state_core = 294 }
+		MIT = {	add_state_core = 810 }
+		MIT = {	add_state_core = 809 }
+		MIT = {	add_state_core = 678 }
+		MIT = {	add_state_core = 679 }
+		MIT = {	add_state_core = 292 }
+		MIT = {	add_state_core = 837 }
+		MIT = {	add_state_core = 675 }
+		MIT = { add_state_core = 291 }
+		MIT = { add_state_core = 863 }
+		MIT = { add_state_core = 658 }
+		MIT = { add_state_core = 676 }
+		MIT = { add_state_core = 872 }
+		MIT = { set_capital = 292 } 
+		puppet = MIT
+    }
+	}
+	}
+    
+	
+	focus = {
+		id = ITA_promote_italian_movies
+		icon = GFX_goal_ita_promote_italian_movies
+		prerequisite = { focus = ITA_form_the_italian_middle_east }
+		prerequisite = { focus = ITA_claim_savoy }
+		available = {
+		OR = {
+		has_completed_focus = ITA_partition_switzerland
+		has_completed_focus = ITA_demand_istria
+		}
+		}
+		x = 31
+		y = 15
+		cost = 8
+		completion_reward = {
+        add_ideas = ita_italian_movies
+		hidden_effect = {
+		set_country_flag = promoted_italian_movies
+    }
+	}
+	}
+	
+	focus = {
+		id = ITA_arrest_political_opponents
+		icon = GFX_goal_ita_eliminate_political_opponents
+		prerequisite = { focus = ITA_promote_italian_movies }
+		x = 31
+		y = 17
+		cost = 15
+		completion_reward = {
+        add_stability = 0.10
+		add_political_power = 200
+		add_popularity = {
+            ideology = fascism
+            popularity = 1
+        }
+		add_popularity = {
+            ideology = communism
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = liberal
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = social_democratic
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = democratic
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = theocracy
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = theocracy
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = neutrality
+            popularity = -1
+        }
+		add_popularity = {
+            ideology = monarchist
+            popularity = -1
+        }
+	}
+	}
+	
+	focus = {
+		id = ITA_a_nation_reborn
+		icon = GFX_goal_ita_reborn_nation
+		prerequisite = { focus = ITA_arrest_political_opponents }
+		x = 31
+		y = 19
+		cost = 15
+		completion_reward = {
+        add_ideas = ita_nation_reborn
+	}
+	}
    
