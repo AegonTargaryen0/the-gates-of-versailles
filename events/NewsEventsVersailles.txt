@@ -109,59 +109,6 @@ news_event = { #Mussolini Assassinated
 	}
 }
 
-news_event = { #Victor Emmanuel III Executed
-	id = news.339
-	title = news.339.t
-	desc = news.339.desc
-	picture = GFX_news_event_french_parade
-	
-	major = yes
-	
-	is_triggered_only = yes
-	
-	option = {
-		name = news.339.a
-		trigger = {
-			TAG = ITA
-		}
-	}
-	option = {
-		name = news.339.b
-		trigger = {
-			TAG = FRA
-		}
-	}
-	option = {
-		name = news.339.c
-		trigger = {
-			TAG = AUS
-		}
-	}
-	option = {
-		name = news.339.d
-		trigger = {
-			TAG = ENG
-		}
-	}
-	option = {
-		name = news.339.e
-		trigger = {
-			TAG = GER
-		}
-	}
-	option = {
-		name = news.339.f
-		trigger = {
-			NOT = { TAG = AUS }
-			NOT = { TAG = ITA }
-			NOT = { TAG = GER }
-			NOT = { TAG = FRA }
-			NOT = { TAG = ENG }
-			NOT = { is_in_faction_with = AUS }
-		}
-	}
-}
-
 news_event = { #Aostan Revolt
 	id = news.341
 	title = news.341.t
@@ -214,6 +161,297 @@ news_event = { #Aostan Revolt
 			NOT = { TAG = ENG }
 			NOT = { is_in_faction_with = ITA }
 			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #Ciano comes to power
+	id = news.342
+	title = news.342.t
+	desc = news.342.desc
+	picture = GFX_news_event_ciano_comes_to_power
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.342.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.342.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.342.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.342.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.342.e
+		trigger = {
+			has_government = democratic
+			has_government = social_democratic
+			has_government = liberal
+		}
+	}
+	option = {
+		name = news.342.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { has_government = democratic }
+			NOT = { has_government = social_democratic }
+			NOT = { has_government = liberal }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #New leader in Italy Balbo
+    id = news.343
+	title = news.343.t
+	desc = news.343.desc
+	picture = GFX_news_event_balbo_comes_to_power
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.343.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.343.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.343.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.343.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.343.e
+		trigger = {
+			has_government = democratic
+			has_government = social_democratic
+			has_government = liberal
+		}
+	}
+	option = {
+		name = news.343.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { has_government = democratic }
+			NOT = { has_government = social_democratic }
+			NOT = { has_government = liberal }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #New leader in Luigi Federzoni
+    id = news.344
+	title = news.344.t
+	desc = news.344.desc
+	picture = GFX_news_event_federzoni_comes_to_power
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.344.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.344.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.344.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.344.d
+		trigger = {
+			is_in_faction_with = ITA
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+		}
+	}
+	option = {
+		name = news.344.e
+		trigger = {
+			has_government = democratic
+			has_government = social_democratic
+			has_government = liberal
+		}
+	}
+	option = {
+		name = news.344.f
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { has_government = democratic }
+			NOT = { has_government = social_democratic }
+			NOT = { has_government = liberal }
+			NOT = { is_in_faction_with = ITA }
+			NOT = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+news_event = { #Swiss Partition Denied
+    id = news.345
+	title = news.345.t
+	desc = news.345.desc
+	picture = GFX_news_event_swiss_partition_italy_fails
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.345.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.345.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.345.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.345.d
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+		}
+	}
+}
+
+news_event = { #Swiss Partition Accepted
+    id = news.346
+	title = news.346.t
+	desc = news.346.desc
+	picture = GFX_news_event_swiss_partition_italy_success
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.346.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.346.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.346.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.346.d
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+		}
+	}
+}
+
+news_event = { #Swiss Revolt
+    id = news.347
+	title = news.347.t
+	desc = news.346.desc
+	picture = GFX_news_event_swiss_revolt
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.347.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.347.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.347.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.347.d
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
 		}
 	}
 }
