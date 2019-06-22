@@ -2763,6 +2763,10 @@ spriteTypes = {
 		name = "GFX_idea_AFG_Islamic_Kingdom"
 		texturefile = "gfx/interface/ideas/AFG_Islamickingdom.dds"
 	}
+	spriteType = {
+		name = "GFX_idea_AFG_improved_litteracy"
+		texturefile = "gfx/interface/ideas/AFG_improved_litteracy.dds"
+	}
 	
 	### GENERIC PORTRAITS ASIA
 	### suffix from graphicalculturetype
