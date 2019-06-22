@@ -106,18 +106,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			442 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = infrastructure
-				level = 1
-				instant_build = yes 
-				}
-			}
-			445 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-				type = infrastructure
-				level = 1
+				level = 2
 				instant_build = yes 
 				}
 			}
@@ -167,7 +159,7 @@ focus_tree = {
 		prerequisite = { focus = develop_northern_provinces }
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 12
+			factor = 1
 		}
 		completion_reward = {
 			add_resource = {
@@ -198,35 +190,29 @@ focus_tree = {
 			}
 		}
 	}
+
 	focus = {
-		id = expanding_the_copper_mines_of_balochistan
+		id = increase_farming_in_peshawar
 		x = 0
 		y = 4
 		cost = 3
 		prerequisite = { focus = revitalize_oil_industry_in_Herat }
 		available_if_capitulated = no
 		ai_will_do = {
-			factor = 12
+			factor = 1
 		}
 		completion_reward = {
-			445 = {
+			442 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes 
-				}
-			}
-			445 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
 				type = industrial_complex
-				level = 2
+				level = 1
 				instant_build = yes 
 				}
 			}
 		}
 	}
+	
 	focus = {
 		id = mine_for_aluminum_in_peshawar
 		x = 4
@@ -244,18 +230,18 @@ focus_tree = {
             state = 442
 			}
 			442 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = arms_factory
-				level = 1
+				level = 2
 				instant_build = yes 
 				}
 			}
 			442 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 				type = industrial_complex
-				level = 1
+				level = 2
 				instant_build = yes 
 				}
 			}
@@ -267,7 +253,7 @@ focus_tree = {
 		y = 5
 		cost = 3
 		prerequisite = { focus = mine_for_aluminum_in_peshawar }
-		prerequisite = { focus = expanding_the_copper_mines_of_balochistan }
+		prerequisite = { focus = increase_farming_in_peshawar }
 		available_if_capitulated = no
 		ai_will_do = {
 			factor = 1
@@ -551,5 +537,3 @@ focus_tree = {
 		}
 	}
 }
-	
-	
