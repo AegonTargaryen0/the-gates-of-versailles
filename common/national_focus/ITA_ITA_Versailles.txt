@@ -1090,7 +1090,7 @@ tag = ITA
 	}
 	
 	focus = {
-		id = ITA_bomber_effort
+		id = ITA_bomber_effort_versailles
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = ITA_the_modern_landscape }
 		x = 21
@@ -1608,7 +1608,7 @@ tag = ITA
 		completion_reward = {
         create_wargoal = {
         type = puppet_wargoal_focus
-        target = SAU
+        target = ETH
     }
     }
 	}
