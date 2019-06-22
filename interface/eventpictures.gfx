@@ -1934,13 +1934,47 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_news_event_france_october_events"
 		texturefile = "gfx/event_pictures/news_event_fra_october_events.dds"
+	}
+
+    spriteType = {
+		name = "GFX_news_event_ciano_comes_to_power"
+		texturefile = "gfx/event_pictures/news_event_ciano_takes_power.dds"
 	}	
+
+    spriteType = {
+		name = "GFX_news_event_balbo_comes_to_power"
+		texturefile = "gfx/event_pictures/news_event_italo_balbo_comes_to_power.dds"
+	}
+
+    spriteType = {
+		name = "GFX_news_event_federzoni_comes_to_power"
+		texturefile = "gfx/event_pictures/news_event_luigi_federzoni_comes_to_power.dds"
+	}
+
+    spriteType = {
+		name = "GFX_news_event_swiss_partition_italy_fails"
+		texturefile = "gfx/event_pictures/news_event_swiss_partition_italy_fails.dds"
+	}
+
+    spriteType = {
+		name = "GFX_news_event_swiss_partition_italy_success"
+		texturefile = "gfx/event_pictures/news_event_swiss_partition_italy_success.dds"
+	}
+
+    spriteType = {
+		name = "GFX_news_event_swiss_revolt"
+		texturefile = "gfx/event_pictures/news_event_swiss_revolt.dds"
+	}		
 	
 #GATES OF VERSAILLES: FRANCE EVENTS#
 
 	spriteType = {
 		name = "GFX_report_event_siam_indochina_ask_help"
 		texturefile = "gfx/event_pictures/report_event_sia_ind_ask_help.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_austria_deal_italy"
+		texturefile = "gfx/event_pictures/GFX_report_event_mussolini_hitler.dds"
 	}
 	spriteType = {
 		name = "GFX_report_event_france_indochinese_independence"
