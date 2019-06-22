@@ -71,6 +71,10 @@ opinion_modifiers = {
 	sent_weapons = { value = 25 }
 }
 
+opinion_modifiers = {
+	istria_deal_denied = { value = -30 }
+}
+
 #Ethiopia
 opinion_modifiers = {
 	anti_colonialist = { value = -50 }
