@@ -638,7 +638,7 @@ country_event = {# Switzerland Partition Denied
 	}
 	
 	option = { # End 
-		name = italy.36.a
+		name = italy.36.b
 		ai_chance = {
 			factor = 50
 		}
