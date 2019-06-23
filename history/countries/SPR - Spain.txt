@@ -55,9 +55,9 @@ create_country_leader = {
 }
 
 create_country_leader = {
-	name = "Francisco Franco"
-	desc = "POLITICS_FRANCISCO_FRANCO_DESC"
-	picture = "Portrait_Spain_Francisco_Franco_Versailles.dds"
+	name = "Spanish Military Council"
+	desc = "POLITICS_SPANISH_MILITARY_COUNCIL_DESC"
+	picture = "Portrait_Spain_Military_Council.dds"
 	expire = "1965.1.1"
 	ideology = military_junta
 	traits = {
