@@ -1175,6 +1175,7 @@ tag = ITA
     }
 	}
 	
+	#Fascist Tree
 	focus = {
 		id = ITA_strenghten_mussolinis_power
 		icon = GFX_goal_ita_support_mussolini
@@ -1697,11 +1698,9 @@ tag = ITA
 		prerequisite = { focus = ITA_invade_oman }
 		prerequisite = { focus = ITA_invade_arabia }
 		available = {
-		OR = {
 		YEM = { is_puppet_of = ITA }
 		owns_state = 810
-		owns_state = 293
-		}
+		YEM = { owns_state = 293 }
 		owns_state = 809
 		owns_state = 678
 		owns_state = 679
@@ -1757,7 +1756,12 @@ tag = ITA
 		MIT = { add_state_core = 872 }
 		MIT = { set_capital = 292 } 
 		puppet = MIT
+		MIT = { annex_country = {
+        target = YEM
+        transfer_troops = yes
+    }   
     }
+	}
 	}
 	}
     
@@ -1843,5 +1847,22 @@ tag = ITA
 		completion_reward = {
         add_ideas = ita_nation_reborn
 	}
+	}
+	
+	#Unification Tree
+	focus = {
+		id = ITA_the_unfication_of_italy
+		icon = GFX_goal_ita_support_mussolini
+		prerequisite = { focus = ITA_the_future_of_italy }
+		x = 36
+		y = 1
+		cost = 2
+		completion_reward = {
+        add_political_power = 50
+		add_popularity = {
+        ideology = fascism
+        popularity = 0.1
+    }
+    }
 	}
    
