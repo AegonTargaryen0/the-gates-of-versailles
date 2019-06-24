@@ -1,0 +1,31 @@
+spriteTypes = {
+##### FOCUS ICONS FOR AFGHANISTAN
+    SpriteType = {
+        name = "GFX_AFG_focus_on_internal_matter"
+        texturefile = "gfx/interface/goals/AFG_focus_on_internal_matter.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_increase_farming_in_peshawar"
+        texturefile = "gfx/interface/goals/AFG_increase_farming_in_peshawar.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_mine_for_aluminum_in_peshawar"
+        texturefile = "gfx/interface/goals/AFG_mine_for_aluminum_in_peshawar.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_modernize_electronics"
+        texturefile = "gfx/interface/goals/AFG_modernize_electronics.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_push_for_education_1"
+        texturefile = "gfx/interface/goals/AFG_push_for_education_1.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_revitalize_oil_industry_in_Herat"
+        texturefile = "gfx/interface/goals/AFG_revitalize_oil_industry_in_Herat.dds"
+    }
+    SpriteType = {
+        name = "GFX_AFG_solve_the_education_problem"
+        texturefile = "gfx/interface/goals/AFG_solve_the_education_problem.dds"
+    }
+}
