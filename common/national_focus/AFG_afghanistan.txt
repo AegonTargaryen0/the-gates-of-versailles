@@ -13,6 +13,7 @@ focus_tree = {
 
 	focus = {
 		id = focus_on_internal_matter
+		icon = GFX_AFG_focus_on_internal_matter
 		x = 6
 		y = 0
 		cost = 10
@@ -42,6 +43,7 @@ focus_tree = {
 
 	focus = {
 		id = focus_on_education
+		icon = GFX_AFG_push_for_education_1
 		x = 10
 		y = 1
 		cost = 10
@@ -152,6 +154,7 @@ focus_tree = {
 	}
 	focus = {
 		id = revitalize_oil_industry_in_Herat
+		icon = GFX_AFG_revitalize_oil_industry_in_Herat
 		x = 0
 		y = 3
 		cost = 3
@@ -193,6 +196,7 @@ focus_tree = {
 
 	focus = {
 		id = increase_farming_in_peshawar
+		icon = GFX_AFG_increase_farming_in_peshawar
 		x = 0
 		y = 4
 		cost = 3
@@ -215,6 +219,7 @@ focus_tree = {
 	
 	focus = {
 		id = mine_for_aluminum_in_peshawar
+		icon = GFX_AFG_mine_for_aluminum_in_peshawar
 		x = 4
 		y = 4
 		cost = 3
@@ -274,6 +279,7 @@ focus_tree = {
 
 	focus = {
 		id = solve_the_education_problem
+		icon = GFX_AFG_solve_the_education_problem
 		x = 10
 		y = 2
 		cost = 3
@@ -469,6 +475,7 @@ focus_tree = {
 
 	focus = {
 		id = modernize_electronics
+		icon = GFX_AFG_modernize_electronics
 		x = 10
 		y = 7
 		prerequisite = { focus = finalize_education_reforms }
