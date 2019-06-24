@@ -75,3 +75,27 @@ country_event = { #France sends us a peace agreement
 		}
 	}
 }
+
+country_event = { #France ask us to enter the war in their side in exchange for Gibraltar
+	id = spain.15
+	title = spain.15.t
+	desc = spain.15.d
+#	picture =
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	option = { #Yes
+		name = spain.15.a
+		add_to_war = { 
+		targeted_alliance = FRA
+		enemy = ENG
+		hostility_reason = asked_to_join
+			}
+		}
+		
+	option = { #no
+		name = spain.15.b
+		add_war_support = -0.02
+		add_stability = -0.02	
+}
