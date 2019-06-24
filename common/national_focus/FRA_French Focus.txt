@@ -104,6 +104,7 @@ focus = {
 
 	available = {
 	date > 1939.1.1
+	has_army_manpower = { size > 899999 }
 	}
 	
 	completion_reward = {
@@ -876,7 +877,7 @@ focus = {
 
 	available = {
 		date > 1940.1.1
-		has_army_manpower = { size > 899999 }
+		has_army_manpower = { size > 1249999 }
 		}
 	
 	completion_reward = {
@@ -904,6 +905,7 @@ focus = {
 		has_country_flag = fra_domination_benelux
 		has_country_flag = fra_announce_faction_restructuration
 		}
+	date > 1937.5.1
 	}
 	
  	completion_reward = { 
@@ -1009,18 +1011,21 @@ ai_will_do = {
 
 #Focus for Invite Spain to take back Gibraltar
 focus = { 
-id = FRA_invitespaintotakebackgibraltar
-icon = GFX_goal_tripartite_pact
-x = 21
-y = 7
-cost = 10
-available_if_capitulated = yes 
-prerequisite = { focus = FRA_destroytheoldrival } 
-ai_will_do = { 
- factor = 1
- } 
-
- } 
+	id = FRA_invitespaintotakebackgibraltar
+	icon = GFX_goal_tripartite_pact
+	x = 21
+	y = 7
+	cost = 10
+	available_if_capitulated = yes 
+	prerequisite = { focus = FRA_destroytheoldrival } 
+	ai_will_do = { 
+	factor = 1
+	} 
+	
+	available = {
+	has_war_with = ENG
+	}
+} 
 
 #Focus for Inner Faction Rarrangement
 focus = { 
@@ -1100,7 +1105,16 @@ focus = {
 	bypass = {
 		AUS = { has_war_with = FRA }
 		}
-	} 
+
+	completion_reward = {
+	FRA = {
+		create_wargoal = {
+			type = topple_government
+			target = AUS
+			}
+		}
+	}
+}	
 
 #Focus for End the Russian Hegemony
 focus = { 
