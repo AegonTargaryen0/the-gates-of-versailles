@@ -179,9 +179,6 @@ focus = {
 	ai_will_do = { 
 	factor = 1
 	}
-	available = {
-		date > 1937.1.1
-		}
 
 	completion_reward = {
 	31 = {
@@ -216,7 +213,7 @@ focus = {
 	factor = 1
 	}
 	available = {
-		date > 1939.1.1
+		date > 1938.1.1
 		}
 
 	completion_reward = {
@@ -252,7 +249,7 @@ focus = {
 	factor = 1
 	} 
 	available = {
-		date > 1942.1.1
+		date > 1940.1.1
 		}
 
 	completion_reward = {
@@ -295,9 +292,6 @@ focus = {
 	ai_will_do = { 
 	factor = 1
 	}
-	available = {
-		date > 1937.1.1
-		}
 
 	completion_reward = {
 	16 = {
@@ -331,8 +325,9 @@ focus = {
 	ai_will_do = { 
 	factor = 1
 	} 
+
 	available = {
-		date > 1940.1.1
+		date > 1938.1.1
 		}
 
 	completion_reward = {
@@ -650,19 +645,14 @@ focus = {
 focus = { 
 	id = FRA_luniversitdeparis
 	icon = GFX_focus_research2
-	x = 5
-	y = 6
+	x = 4
+	y = 1
 	cost = 10
 	available_if_capitulated = yes 
-	prerequisite = { focus = FRA_2ndmillitaryindustrializationofmetropolitanfrance } 
-	prerequisite = { focus = FRA_3rdindustrializationofmetropolitanfrance } 
+	prerequisite = { focus = FRA_legrandchantier }
 	ai_will_do = { 
 	factor = 1
 	}
-	
-	available = {
-		date > 1945.1.1
-		}
 	
 	completion_reward = {
 		add_research_slot = 1
@@ -1024,6 +1014,12 @@ focus = {
 	
 	available = {
 	has_war_with = ENG
+	}
+	
+	completion_reward = {
+		SPR = {
+			country_event = { id = spain.15 hours = 24 }
+		}
 	}
 } 
 
@@ -1944,17 +1940,18 @@ ai_will_do = {
 focus = { 
 	id = FRA_projetdiamant
 	icon = GFX_focus_rocketry
-	x = 3
-	y = 7
+	x = 4
+	y = 6
 	cost = 10
 	available_if_capitulated = yes 
-	prerequisite = { focus = FRA_luniversitdeparis } 
+	prerequisite = { focus = FRA_3rdindustrializationofmetropolitanfrance }
+	prerequisite = { focus = FRA_2ndmillitaryindustrializationofmetropolitanfrance }
 	ai_will_do = { 
 	factor = 1
 	} 
 
 	available = {
-	date > 1947.1.1
+	date > 1943.1.1
 	}
 
 	completion_reward = {
@@ -1971,17 +1968,17 @@ focus = {
 focus = { 
 	id = FRA_projetgerboisebleue
 	icon = GFX_focus_wonderweapons
-	x = 7
-	y = 7
+	x = 6
+	y = 6
 	cost = 10
 	available_if_capitulated = yes 
-	prerequisite = { focus = FRA_luniversitdeparis } 
+	prerequisite = { focus = FRA_2ndmillitaryindustrializationofmetropolitanfrance } 
 	ai_will_do = { 
 	factor = 1
 	} 
 
 		available = {
-		date > 1947.1.1
+		date > 1943.1.1
 		}
 
 	completion_reward = {
