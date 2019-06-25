@@ -1,0 +1,30 @@
+################### EVENTS FOR AFGHANISTAN
+
+country_event = {
+    id = afghanistan.1
+    title = afghanistan.1.t
+    desc = afghanistan.1.d
+    picture = #
+
+    fire_only_once = yes
+
+    hidden = yes
+
+    immediate = {      
+    }
+}
+
+country_event = {
+    id = afghanistan.2
+    title = afghanistan.2.t
+    desc = afghanistan.2.d
+    picture = desc
+
+    fire_only_once = yes
+
+    hidden = yes
+
+    immediate = {
+        
+    }
+}
