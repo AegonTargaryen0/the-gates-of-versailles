@@ -543,4 +543,57 @@ focus_tree = {
 			}
 		}
 	}
+	
+	###### MILITARY TREE PATH
+
+	focus = {
+		id = reform_the_military 
+		x = 20
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+		add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = get_rid_of_old_tactics
+		x = 18
+		y = 1
+		cost = 10
+		prerequisite = { focus = reform_the_military }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = stick_with_the_old_ways
+		}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = stick_with_the_old_ways
+		x = 22
+		y = 1
+		cost = 10
+		prerequisite = { focus = reform_the_military }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = get_rid_of_old_tactics
+		}
+		completion_reward = {
+						
+		}
+	}
 }
