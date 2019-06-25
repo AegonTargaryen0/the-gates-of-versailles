@@ -6,7 +6,7 @@ set_research_slots = 4
 set_stability = 0.5
 set_war_support = 0.4
 add_ideas = {
-	victor_emmanuel
+	victor_emmanuel_versailles
 	confused_government
 	novus_imperium_romanum 
 	limited_exports
