@@ -1432,10 +1432,14 @@ tag = ITA
 		available = {
 		FRA = { has_war = no }
 		has_war = no
+		has_army_manpower = {
+        size > 750000
+		}
+		date < 1938.03.02
 		}
 		x = 26
 		y = 13
-		cost = 10
+		cost = 20
 		completion_reward = {
         FRA = {
 			country_event = { id = italy.34 hours = 1 }
@@ -1471,7 +1475,6 @@ tag = ITA
 		is_faction_leader = yes
 		country_exists = SPR
 		SPR = { is_puppet = no }
-		is_subject = no
 		}
 		x = 28
 		y = 11
@@ -1492,8 +1495,7 @@ tag = ITA
 		TUR = { is_in_faction = no }
 		is_faction_leader = yes
 		country_exists = TUR
-		SPR = { is_puppet = TUR }
-		is_subject = no
+		TUR = { is_puppet = no }
 		}
 		x = 28
 		y = 12
@@ -1771,12 +1773,7 @@ tag = ITA
 		icon = GFX_goal_ita_promote_italian_movies
 		prerequisite = { focus = ITA_form_the_italian_middle_east }
 		prerequisite = { focus = ITA_claim_savoy }
-		available = {
-		OR = {
-		has_completed_focus = ITA_partition_switzerland
-		has_completed_focus = ITA_demand_istria
-		}
-		}
+		prerequisite = { focus = ITA_partition_switzerland focus = ITA_demand_istria }
 		x = 31
 		y = 15
 		cost = 8
@@ -1852,17 +1849,200 @@ tag = ITA
 	#Unification Tree
 	focus = {
 		id = ITA_the_unfication_of_italy
-		icon = GFX_goal_ita_support_mussolini
+		icon = GFX_goal_ita_unification
 		prerequisite = { focus = ITA_the_future_of_italy }
-		x = 36
+		available = {
+		has_capitulated = no
+		country_exists = NAP 
+		NOT = { has_war_with = NAP }
+		country_exists = FRA 
+		NOT = { has_war_with = FRA }
+		}
+		bypass = {
+		owns_state = 114
+		owns_state = 117
+		owns_state = 156
+		owns_state = 869
+		owns_state = 115
+		owns_state = 870
+		}
+		x = 40
 		y = 1
-		cost = 2
+		cost = 1
 		completion_reward = {
-        add_political_power = 50
-		add_popularity = {
-        ideology = fascism
-        popularity = 0.1
+        add_political_power = 10
     }
+	}
+	
+	focus = {
+		id = ITA_the_conference_of_naples
+		icon = GFX_goal_ita_conference_of_naples
+		prerequisite = { focus = ITA_the_unfication_of_italy }
+		available = {
+		has_capitulated = no
+		NOT = { has_war_with = FRA }
+		NOT = { has_war_with = NAP }
+		country_exists = NAP
+		NAP = { owns_state = 117 }
+		NAP = { owns_state = 156 }
+		NAP = { owns_state = 869 }
+		NAP = { owns_state = 117 }
+		NAP = { owns_state = 115 }
+		NAP = { owns_state = 870 }
+		}
+		x = 40
+		y = 2
+		cost = 10
+		completion_reward = {
+        NAP = {
+			country_event = { id = italy.53 hours = 5 }
+		}
     }
+	}
+	
+	focus = {
+		id = ITA_the_annexation_of_naples
+		icon = GFX_goal_ita_annexation_of_naples
+		prerequisite = { focus = ITA_the_conference_of_naples }
+		available = {
+		NAP = { has_stability < 0.5 }
+		has_war_support > 0.6 
+		has_capitulated = no
+		has_war = no
+		NAP = { has_war = no }
+		NAP = { owns_state = 117 }
+		NAP = { owns_state = 156 }
+		country_exists = NAP
+		}
+		bypass = {
+		NOT = { country_exists = NAP }
+		owns_state = 117
+		owns_state = 156
+		owns_state = 115
+		owns_state = 869
+		owns_state = 870
+		}
+		x = 41
+		y = 3
+		cost = 10
+		completion_reward = {
+        NAP = {
+			country_event = { id = italy.61 days = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_pay_for_south_tyrol
+		icon = GFX_goal_ita_pay_for_south_tyrol
+		prerequisite = { focus = ITA_the_annexation_of_naples }
+		available = {
+		has_capitulated = no
+		has_war = no
+		AUS = { has_war = no }
+		AUS = { owns_state = 39 }
+		}
+		bypass = {
+		owns_state = 39
+		}
+		x = 41
+		y = 4
+		cost = 10
+		completion_reward = {
+        AUS = {
+			country_event = { id = italy.63 days = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_sardinian_uprising
+		icon = GFX_goal_ita_sardinian_uprising
+		prerequisite = { focus = ITA_the_conference_of_naples }
+		available = {
+		has_capitulated = no
+		NOT = { has_war_with = FRA }
+		FRA = { has_war = no }
+		FRA = { owns_state = 114 }
+		NOT = { country_exists = SAR }
+		}
+		bypass = {
+		owns_state = 114
+		FRA = { NOT = { owns_state = 114 } }
+		}
+		x = 39
+		y = 3
+		cost = 10
+		completion_reward = {
+        FRA = {
+			country_event = { id = italy.57 days = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_ultimatum_to_sardinia
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = ITA_sardinian_uprising }
+		available = {
+		has_capitulated = no
+		has_war = no
+		FRA = { has_war_with = SAR }
+		SAR = { owns_state = 114 }
+		country_exists = SAR 
+		}
+		bypass = {
+		owns_state = 114
+		}
+		x = 39
+		y = 4
+		cost = 10
+		completion_reward = {
+        SAR = {
+			country_event = { id = italy.58 days = 1 }
+		}
+    }
+	}
+	
+	focus = {
+		id = ITA_unification_of_italy
+		icon = GFX_goal_ita_unification_completed
+		prerequisite = { focus = ITA_ultimatum_to_sardinia }
+		prerequisite = { focus = ITA_pay_for_south_tyrol }
+		available = {
+		has_capitulated = no
+		is_puppet = no
+		owns_state = 158
+		owns_state = 159
+		owns_state = 161
+		owns_state = 162
+		owns_state = 160
+		owns_state = 39
+		owns_state = 157
+		owns_state = 2
+		owns_state = 869
+		owns_state = 870
+		owns_state = 117
+		owns_state = 156
+		owns_state = 115
+		owns_state = 114
+        }
+		x = 40
+		y = 5
+		y = 5
+		cost = 10
+		completion_reward = {
+        custom_effect_tooltip = ita_unification_tt
+		hidden_effect = {
+		add_state_core = 869
+		add_state_core = 870
+		add_state_core = 117
+		add_state_core = 156
+		add_state_core = 115
+		country_event = { hours = 10 id = news.348 }
+    }
+	
+	}
+	
 	}
    
