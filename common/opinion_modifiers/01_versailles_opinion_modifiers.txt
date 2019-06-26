@@ -72,7 +72,15 @@ opinion_modifiers = {
 }
 
 opinion_modifiers = {
+	didnt_join_faction = { value = -75 }
+}
+
+opinion_modifiers = {
 	istria_deal_denied = { value = -30 }
+}
+
+opinion_modifiers = {
+	didnt_allow_south_tyrol = { value = -30 }
 }
 
 #Ethiopia
