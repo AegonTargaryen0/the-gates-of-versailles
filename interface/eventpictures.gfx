@@ -1964,7 +1964,12 @@ spriteTypes = {
     spriteType = {
 		name = "GFX_news_event_swiss_revolt"
 		texturefile = "gfx/event_pictures/news_event_swiss_revolt.dds"
-	}		
+	}	
+
+    spriteType = {
+		name = "GFX_news_event_italian_unfication"
+		texturefile = "gfx/event_pictures/news_event_italian_unification.dds"
+	}	
 	
 #GATES OF VERSAILLES: FRANCE EVENTS#
 
