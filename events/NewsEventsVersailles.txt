@@ -421,7 +421,7 @@ news_event = { #Swiss Partition Accepted
 news_event = { #Swiss Revolt
     id = news.347
 	title = news.347.t
-	desc = news.346.desc
+	desc = news.347.desc
 	picture = GFX_news_event_swiss_revolt
 	
 	major = yes
@@ -452,6 +452,65 @@ news_event = { #Swiss Revolt
 			NOT = { TAG = AUS }
 			NOT = { TAG = ITA }
 			NOT = { TAG = FRA }
+		}
+	}
+}
+
+news_event = { #Italian Unification
+    id = news.348
+	title = news.348.t
+	desc = news.348.desc
+	picture = GFX_news_event_italian_unfication
+	
+	major = yes
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = news.348.a
+		trigger = {
+			TAG = ITA
+		}
+	}
+	option = {
+		name = news.348.b
+		trigger = {
+			TAG = FRA
+		}
+	}
+	option = {
+		name = news.348.c
+		trigger = {
+			TAG = AUS
+		}
+	}
+	option = {
+		name = news.348.d
+		trigger = {
+			TAG = GER
+		}
+	}
+	option = {
+		name = news.348.e
+		trigger = {
+			TAG = ENG
+		}
+	}
+	option = {
+		name = news.348.f
+		trigger = {
+			TAG = SOV
+		}
+	}
+	option = {
+		name = news.347.g
+		trigger = {
+			NOT = { TAG = AUS }
+			NOT = { TAG = ITA }
+			NOT = { TAG = FRA }
+			NOT = { TAG = GER }
+			NOT = { TAG = ENG }
+			NOT = { TAG = SOV }
 		}
 	}
 }
