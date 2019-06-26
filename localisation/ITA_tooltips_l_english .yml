@@ -1,10 +1,12 @@
 ﻿l_english:
- aostan_revolt_tt:0 "§RThe French may declare war on you if they accept Aosta's call for help§!\n"
+ aostan_revolt_tt:0 "§RThe French may declare war on you if they accept Aosta's call for help.§!\n"
  generals_trained_tt:0 "§OPrevious incompetent generals will get a skill increase so they aren't incompetent anymore.§!\n"
  ciano_comes_to_power:0 "§R Galeazzo Ciano becomes the leader of Italy§!\n"
  balbo_comes_to_power:0 "§R Italo Balbo becomes the leader of Italy§!\n"
  federzoni_comes_to_power:0 "§R Luigi Federzoni becomes the leader of Italy§!\n"
  il_duces_right_tt:0 "§G Your current Duce will become a Field Marshal§!\n"
  italian_middle_east_tt:0 "§G The conquered lands in the Middle East will be unified into one nation§!\n"
+ sardinian_revolt_tt:0 "§R Sardinia will become independent and you will be at war with them.§!\n"
+ ita_unification_tt:0 "§G All of the rightful Italian land will be cored!§!\n"
 
  

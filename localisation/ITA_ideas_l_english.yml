@@ -39,6 +39,9 @@
  ita_italian_movies:0 "Italian Movies"
  ita_nation_reborn:0 "Nation Reborn"
  ita_nation_reborn_desc:0 "After countless reforms and conquets are nation has been truly reborn. The years of our regime will last throughout the ages and will never be forgotten by the Italian people"
+ ita_nap_war:0 "Third War of Italian Independence"
+ ita_nap_war_desc:0 "We are at war with our own people that is why we must fight it with our own..."
+ ita_payments_for_south_tyrol:0 "Payments for South Tryol"
  #Ministers
  giorgio_amendola:0 "Giorgio Amendola"
  costantino_lazzari:0 "Constantino Lazzari"
@@ -50,4 +53,4 @@
  AUS_paying_italy_desc:0 "With Italy's help with our industry we have to pay them back in return."
  AUS_italian_aid:0 "Italian Aid"
  AUS_italian_aid_desc:0 "With our payments to Italy our industrial capabilities have increased significantly. With this new industrial capability we will be able to create largest army in the Balkans!"
- 
+ aus_payments_for_south_tyrol_recieve:0 "Payments from Italy for South Tyrol"
