@@ -382,9 +382,30 @@ ideas = {
 			modifier = {
 				production_factory_max_efficiency_factor = 0.15
 				production_speed_buildings_factor = 0.1
-				local_resources_factor = 0.25
+				local_resources_factor = 0.30
 				industry_repair_factor = 0.2
 				equipment_conversion_speed = 0.05
+			}
+		}
+		
+		aus_payments_for_south_tyrol_recieve = {
+				
+			allowed = {
+				original_tag = AUS
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+				
+			modifier = {
+				political_power_gain = 0.25
+				war_support_weekly = 0.01
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.05
 			}
 		}
 	}
