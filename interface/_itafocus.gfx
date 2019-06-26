@@ -221,4 +221,34 @@ spriteTypes = {
 	name = "GFX_goal_ita_reborn_nation"
 	texturefile = "gfx/interface/goals/ita_nation_reborn.dds"			
 	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_unification"
+	texturefile = "gfx/interface/goals/ita_unification_versailles.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_conference_of_naples"
+	texturefile = "gfx/interface/goals/ita_naples_conference.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_sardinian_uprising"
+	texturefile = "gfx/interface/goals/ita_sardinian_uprising.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_annexation_of_naples"
+	texturefile = "gfx/interface/goals/ita_annexation_of_naples.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_pay_for_south_tyrol"
+	texturefile = "gfx/interface/goals/ita_pay_for_south_tyrol.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_unification_completed"
+	texturefile = "gfx/interface/goals/ita_unification_complete.dds"			
+	}
 }
