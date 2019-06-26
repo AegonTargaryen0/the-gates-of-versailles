@@ -9,6 +9,10 @@ AOA = {
 	color = rgb { 135 82 54 }
 	color_ui = rgb { 135 82 54 }
 }
+SAR = {
+	color = rgb { 43 166 199 }
+	color_ui = rgb { 43 166 199 }
+}
 LIC = {
 	color = rgb { 0 0 128 }
 	color_ui = rgb { 0 0 128 }
