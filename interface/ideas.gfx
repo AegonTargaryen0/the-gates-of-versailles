@@ -3834,6 +3834,18 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/ita_nation_reborn.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_nap_ita_war"
+		texturefile = "gfx/interface/ideas/third_italian_war_of_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_nap_war"
+		texturefile = "gfx/interface/ideas/third_italian_war_of_independence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_payments_for_south_tyrol"
+		texturefile = "gfx/interface/ideas/ita_payments_for_south_tyrol.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_catholic_influence"
 		texturefile = "gfx/interface/ideas/poland_catholic_influence.dds"
 	}
@@ -3845,6 +3857,10 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_idea_AUS_italian_aid"
 		texturefile = "gfx/interface/ideas/aus_italian_aid.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_aus_payments_for_south_tyrol_recieve"
+		texturefile = "gfx/interface/ideas/aus_payments_for_south_tyrol_recieve.dds"
 	}
 }
 	
