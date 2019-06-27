@@ -547,53 +547,64 @@ focus_tree = {
 	###### MILITARY TREE PATH
 
 	focus = {
-		id = reform_the_military 
+		id = attempt_to_reform_the_military
 		x = 20
 		y = 0
-		cost = 10
+		cost = 20
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
 		}
 
+		select_effect = {
+			set_country_flag = military_reform
+		}
 		completion_reward = {
 		add_political_power = 50
 		}
 	}
 
 	focus = {
-		id = get_rid_of_old_tactics
+		id = military_reform_success
 		x = 18
 		y = 1
-		cost = 10
-		prerequisite = { focus = reform_the_military }
+		cost = 0
+		prerequisite = { focus = attempt_to_reform_the_military }
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
 		}
-		mutually_exclusive = {
-			focus = stick_with_the_old_ways
-		}
-		completion_reward = {
 
+		mutually_exclusive = {
+			focus = failed_military_reforms
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = AFG_Backward_Military
+				}
+				swap_ideas = {
+					remove_idea = AFG_Backward_Military
+					add_idea = AFG_Backward_Military_2
+				}
+			}
 		}
 	}
 
 	focus = {
-		id = stick_with_the_old_ways
+		id = failed_military_reforms
 		x = 22
 		y = 1
-		cost = 10
-		prerequisite = { focus = reform_the_military }
+		cost = 0
+		prerequisite = { focus = attempt_to_reform_the_military }
 		available_if_capitulated = yes
 		ai_will_do = {
 			factor = 1
 		}
-		mutually_exclusive = {
-			focus = get_rid_of_old_tactics
-		}
+
 		completion_reward = {
-						
+			add_political_power = -100
 		}
 	}
 }
