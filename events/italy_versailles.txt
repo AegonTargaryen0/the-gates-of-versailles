@@ -700,6 +700,7 @@ country_event = {# Swiss Independence Movement
 		set_country_flag = ita_swiss_independent_movement
 	}
 }
+}
 
 country_event = {# Swiss Revolt
 	id = italy.39
@@ -780,8 +781,6 @@ country_event = {# Spanish Alliance
 		ITA = {
 			country_event = { id = italy.42 days = 1 }
 	}
-}
-
 }
 
 country_event = {# Spanish Accept
@@ -1082,7 +1081,7 @@ country_event = {# Naples Conference
     fire_only_once = yes
 
 	option = { # Concede Abruzzo and Gaeta
-		name = italy.53.b
+		name = italy.53.a
 		ai_chance = {
 			factor = 50
 		}
@@ -1106,7 +1105,7 @@ country_event = {# Naples Conference
 }
 
     option = { # Concede Nothing!
-		name = italy.53.b
+		name = italy.53.c
 		ai_chance = {
 			factor = 10
 		}
