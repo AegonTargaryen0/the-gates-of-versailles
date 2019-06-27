@@ -1,5 +1,5 @@
 ideas = {
-    country = {
+    country = { ###ECONOMIC BASED IDEAS
         revitalized_economy = {
             allowed = {
 				original_tag = AFG
@@ -26,6 +26,7 @@ ideas = {
                 consumer_goods_factor = 0.10              
             }
         }
+		####LITTERACY BASED IDEAS
         AFG_bad_litteracy_2 = {
             allowed = {
 				original_tag = AFG
@@ -86,6 +87,23 @@ ideas = {
 			modifier = {
 				research_speed_factor = 0.10
 			}      
+		}
+		####MILITARY BASED IDEAS
+
+		AFG_Backward_Military_2 = {
+			allowed = {
+				original_tag = AFG
+			}
+			removal_cost = -1
+
+			modifier = {
+				offence = -0.30
+				defence = -0.30
+			}
+			research_bonus = {
+				land_doctrine = -0.25
+				air_doctrine = -0.25
+			}
 		}
     }
 }
