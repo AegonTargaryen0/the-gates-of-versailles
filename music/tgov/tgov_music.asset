@@ -14,6 +14,6 @@ music = {
 }
 music = {
 	name = "chantognion"
-	file = "chantoignon.ogg"
+	file = "chantognion.ogg"
 	volume = 0.65
 }
