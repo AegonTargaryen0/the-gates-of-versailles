@@ -1,0 +1,37 @@
+
+music_station = "tgov"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.5
+		}
+	TAG = FRA		
+	}
+}
+
+music = {
+	song = "ussranthem"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = communism
+		}		
+	}	
+}
+
+music = {
+	song = "chantognion"
+	
+	chance = {
+		modifier = {
+			factor = 1
+
+			has_government = neutrality
+			TAG = FRA
+		}		
+	}	
+}
