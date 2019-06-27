@@ -1,4 +1,4 @@
-﻿capital = 282
+capital = 282
 
 oob = "JAP_1936"
 
@@ -185,9 +185,8 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 21
-	fascism = 10
-	neutrality = 69
+	monarchist = 99
+	neutrality = 1
 }
 
 create_country_leader = {
