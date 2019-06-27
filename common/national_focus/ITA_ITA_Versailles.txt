@@ -322,16 +322,6 @@ tag = ITA
 						}
 					}
 				}
-		160 = {
-					if = {
-						limit = { is_controlled_by = ROOT }
-						add_building_construction = {
-							type = infrastructure
-							level = 4
-							instant_build = yes
-						}
-					}
-				}
 	}
 }
 
@@ -1727,6 +1717,11 @@ tag = ITA
 		cost = 1
 		completion_reward = {
         custom_effect_tooltip = italian_middle_east_tt
+		unlock_decision_tooltip = ITA_improve_oil_production_in_iraq
+		unlock_decision_tooltip = ITA_enforced_segregation
+		unlock_decision_tooltip = ITA_arabian_highway
+		unlock_decision_tooltip = ITA_omani_tungsten_mines
+		unlock_decision_tooltip = ITA_send_off_ugo_cavallero
 		hidden_effect = {
 		MIT = { transfer_state = 293 }
 		MIT = { transfer_state = 658 }
