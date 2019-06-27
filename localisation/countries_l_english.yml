@@ -591,6 +591,10 @@
  AOA_neutrality_DEF:0 "Aosta"
  AOA_fascism_ADJ:0 "Aostan"
  AOA_neutrality_ADJ:0 "Aostan"
+ 
+ SAR_social_democratic:0 "Socialist Republic of Sardinia"
+ SAR_social_democratic_DEF:0 "the Socialist Republic of Sardinia"
+ SAR_social_democratic_ADJ:0 "Sardinian"
 
  ######## END
  
