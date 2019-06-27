@@ -1,6 +1,7 @@
 ################### EVENTS FOR AFGHANISTAN
 
-country_event = {
+##### Maybe we need to reform the military
+country_event = {  #Some Stupid Shit
     id = afghanistan.1
     title = afghanistan.1.t
     desc = afghanistan.1.d
@@ -10,21 +11,47 @@ country_event = {
 
     hidden = yes
 
-    immediate = {      
+    trigger = {
+        tag = AFG
+        has_country_flag = military_reform
     }
-}
+    mean_time_to_happen = {
+        days = 10
+    }
 
-country_event = {
-    id = afghanistan.2
+    option = { #Yay Reform
+        name = reform_1
+        clr_country_flag = military_reform
+        set_country_flag = military_reform_2
+        stability_factor = -0.1
+        add_political_power = -25
+    }
+
+    option = { #Fuck Reform
+        name = reform_2 
+        clr_country_flag = military reform 
+        set_country_flag = military_reform_3
+        stability_factor = 0.05
+        add_political_power = 25
+    }
+
+
+country_event = { # Guys maybe we should stop using spears
+     id = afghanistan.2
     title = afghanistan.2.t
     desc = afghanistan.2.d
-    picture = desc
-
+    picture = #
+    
     fire_only_once = yes
 
     hidden = yes
 
-    immediate = {
-        
+    trigger = {
+        tag = AFG
+        has_country_flag = military_reform_2
+    }
+
+     mean_time_to_happen = {
+        days = 20
     }
 }
