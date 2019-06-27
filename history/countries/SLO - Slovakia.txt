@@ -4,10 +4,13 @@ oob = "SLO_1939"
 
 set_technology = {
 	gw_artillery = 1
+	interwar_artillery = 1
+	interwar_antiair = 1
 	gwtank = 1
 	basic_light_tank = 1
 	infantry_weapons = 1
 	infantry_weapons1 = 1
+	infantry_weapons2 = 1
 	support_weapons = 1
 	tech_support = 1
 	tech_recon = 1
@@ -19,44 +22,6 @@ set_technology = {
 }
 
 give_guarantee = CZE
-
-1939.1.1 = {
-	
-	add_political_power = 1198
-
-	#generic focuses
-	complete_national_focus = army_effort
-	complete_national_focus = equipment_effort
-	complete_national_focus = motorization_effort
-	complete_national_focus = aviation_effort
-	complete_national_focus = naval_effort
-	complete_national_focus = flexible_navy
-	complete_national_focus = industrial_effort
-	complete_national_focus = construction_effort
-	complete_national_focus = production_effort
-	
-	set_technology = {
-		#doctrines
-		formation_flying = 1
-		grand_battle_plan = 1
-		trench_warfare = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		radio_detection = 1
-		mechanical_computing = 1
-		computing_machine = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		construction1 = 1
-		concentrated_industry = 1
-	}
-}
 
 set_politics = {
 	ruling_party = social_democratic
@@ -76,19 +41,21 @@ create_country_leader = {
 	desc = "POLITICS_JOZEF_TISO_DESC"
 	picture = "Portrait_Slovakia_Jozef_Tiso.dds"
 	expire = "1965.1.1"
-	ideology = fascism_ideology
-	traits = {
-		#
-	}
+	ideology = catholic_theocracts
 }
 
 create_country_leader = {
-	name = "Emanuel Lehocky"
-	desc = "POLITICS_EMANUEL_LEHOCKY_DESC"
-	picture = "Portrait_Slovakia_Emanuel_Lehocky.dds"
+	name = "Andrej Hlinka"
+	desc = ""
+	picture = "Portrait_SLO_Andrej_Hlinka.dds"
 	expire = "1965.1.1"
-	ideology = labourism
-	traits = {
-		#
-	}
+	ideology = egalitarianism
+}
+
+create_country_leader = {
+	name = "Vojtech Tuka"
+	desc = ""
+	picture = ""
+	expire = "1965.1.1"
+	ideology = traditional_fascism
 }
