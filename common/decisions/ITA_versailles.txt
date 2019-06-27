@@ -238,5 +238,266 @@ ITA_teach_general_staff = {
 	}
 
 }
+
+ITA_develop_italian_middle_east = {
+
+	ITA_improve_oil_production_in_iraq = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { owns_state = 291 }
+			MIT = { owns_state = 863 }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		add_resource = {
+            type = oil
+            amount = 35
+            state = 291
+        }
+		add_resource = {
+            type = oil
+            amount = 15
+            state = 863
+        }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	
-	   
+	ITA_enforced_segregation = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { has_capitulated = no }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+
+		cost = 55
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		MIT = { add_ideas = mit_ennforced_segregation }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_arabian_highway = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { has_capitulated = no }
+			MIT = { owns_state = 292 }
+			MIT = { owns_state = 678 }
+			MIT = { owns_state = 810 }
+			MIT = { owns_state = 809 }
+			MIT = { owns_state = 678 }
+			MIT = { owns_state = 293 }
+			MIT = { owns_state = 679 }
+			MIT = { owns_state = 658 }
+			MIT = { owns_state = 872 }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+
+		cost = 65
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		MIT = { add_ideas = mit_arabian_highway }
+		292 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+		678 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					}
+				}
+        810 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 3
+							instant_build = yes
+						}
+					}
+				}
+		679 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 4
+							instant_build = yes
+						}
+					}
+				}
+		293 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_omani_tungsten_mines = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { owns_state = 294 }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+		}
+
+		cost = 100
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		add_resource = {
+            type = tungsten
+            amount = 21
+            state = 294
+        }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	
+	ITA_send_off_ugo_cavallero = {
+
+		icon = decision_category_army_reform
+
+		allowed = {
+			tag = ITA
+		}
+
+		available = {
+		    MIT = { has_capitulated = no }
+			MIT = { is_puppet_of = ITA }
+			has_completed_focus = ITA_form_the_italian_middle_east
+			NOT = { has_completed_focus = ITA_fire_incompetent_generals }
+		}
+
+		cost = 25
+
+		fire_only_once = yes
+
+		visible = {
+			tag = ITA
+			has_completed_focus = ITA_form_the_italian_middle_east
+			has_government = fascism
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+		remove_unit_leader = 503
+		MIT = {
+		create_corps_commander = {
+	        name = "Ugo Cavallero"
+	        picture = "Portrait_ITA_Ugo_Cavallero.dds"
+	        traits = { old_guard trait_cautious career_officer }
+	        skill = 2
+	        attack_skill = 1
+	        defense_skill = 1
+	        planning_skill = 2
+	        logistics_skill = 1
+        }
+		}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}	
