@@ -44,4 +44,14 @@ spriteTypes = {
 	    name = "GFX_JAP_modernize_the_industry"
 		texturefile = "gfx/interface/goals/JAP_modernize_the_industry.dds"
 	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_operation_kankoku_o_mamoru"
+		texturefile = "gfx/interface/goals/JAP_operation_kankoku_o_mamoru.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_operation_chugoku_o_mamoru"
+		texturefile = "gfx/interface/goals/JAP_operation_chugoku_o_mamoru.dds"
+	}
 }
