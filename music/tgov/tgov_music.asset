@@ -17,3 +17,13 @@ music = {
 	file = "chantognion.ogg"
 	volume = 0.65
 }
+music = {
+	name = "lavictoireestanous"
+	file = "lavictoireestanous.ogg"
+	volume = 0.65
+}
+music = {
+	name = "vivatvivatinaeternumfornapoleonscoronation"
+	file = "vivatvivatinaeternumfornapoleonscoronation.ogg"
+	volume = 0.65
+}
