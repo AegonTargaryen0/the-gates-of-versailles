@@ -34,7 +34,7 @@ country_event = {  #Some Stupid Shit
         stability_factor = 0.05
         add_political_power = 25
     }
-
+}
 
 country_event = { # Guys maybe we should stop using spears
      id = afghanistan.2
