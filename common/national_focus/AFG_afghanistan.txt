@@ -591,6 +591,73 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = invite_russian_military_advisors
+		x = 16
+		y = 2
+		cost = 10
+		prerequisite = { focus = military_reform_success }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = invite_german_military_advisors 
+		}
+		completion_ reward = {
+			add_tech_bonus = {
+				name = invite_german_military_advisors
+				bonus = 0.5
+				uses = 1
+				category = cat_mass_assault
+			}
+		}
+	}
+
+	focus = {
+		id = invite_german_military_advisors
+		x = 18
+		y = 2
+		cost = 10
+		prerequisite = { focus = military_reform_success }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = invite_russian_military_advisors
+		}
+		completion_ reward = {
+			add_tech_bonus = {
+				name = invite_german_military_advisors
+				bonus = 0.5
+				uses = 1
+				category = cat_mobile_warfare
+			}
+		}
+	}
+
+	focus = {
+		id = start_improving_military_weapons
+		x = 17
+		y = 3
+		cost = 10
+		prerequisite = { focus = invite_german_military_advisors }
+		prerequisite = { focus = invite_russian_military_advisors }
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = start_improving_military_weapons
+				bonus = 0.5
+				uses = 
+				category = infantry_weapons
+			}
+		}
+	}
 
 	focus = {
 		id = failed_military_reforms
