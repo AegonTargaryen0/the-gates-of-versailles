@@ -1,0 +1,71 @@
+ideas = {
+    
+	country = {
+	    JAP_unpopular_army = {
+		    picture = unpopular_army
+			
+			allowed = {
+			    always = yes
+			}
+			
+			allowed_civil_war = {
+			    always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    war_support_factor = -0.10
+				training_time_factor = 0.15
+				conscription = -0.01
+			}
+		}
+		
+		JAP_unmodernized_industry = {
+		    picture = unmodernized_industry
+			
+			allowed = {
+			    always = yes
+			}
+			
+			allowed_civil_war = {
+			    always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = -0.45
+				industry_repair_factor = -0.30
+				local_resources_factor = -0.10
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				conversion_cost_civ_to_mil_factor = 0.20
+				production_factory_max_efficiency_factor = -0.30
+				equipment_conversion_speed = -0.12
+			}
+		}
+		
+		JAP_modernized_industry = {
+		    picture = modernized_industry
+			
+			allowed = {
+			    always = no
+			}
+			
+			allowed_civil_war = {
+			    always = yes
+			}
+			
+			removal_cost = -1
+			
+			modifier = {
+			    production_speed_buildings_factor = 0.45
+				local_resources_factor = 0.10
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				conversion_cost_civ_to_mil_factor = -0.20
+			}
+		}
+	}
+}
