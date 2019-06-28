@@ -3,26 +3,18 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 100
+			add = 10
 			tag = JAP
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 150 y = 1200 }
-	
 	focus = {
 		id = JAP_modernize_the_industry
 		icon = GFX_JAP_modernize_the_industry
 		cost = 10.00
 		x = 4
 		y = 0
-		available_if_capitulated = yes
-        completion_reward = {
-		    swap_ideas = {
-			    remove_idea = JAP_unmodernized_industry
-				add_idea = JAP_modernized_industry
-			}
-		}
+
 	}
 	focus = {
 		id = JAP_rebuild_military_factories
@@ -113,6 +105,21 @@ focus_tree = {
 
 	}
 	focus = {
+		id = JAP_prosper_rubber
+		icon = GFX_focus_generic_rubber
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_expand_rubber_plantations
+		}
+		mutually_exclusive = {
+			focus = JAP_prosper_oil
+			focus = JAP_prosper_steel
+		}
+		x = 4
+		y = 7
+
+	}
+	focus = {
 		id = JAP_rebuild_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
 		cost = 10.00
@@ -193,6 +200,78 @@ focus_tree = {
 
 	}
 	focus = {
+		id = JAP_invest_in_northern_japan
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_the_nation
+		}
+		x = 8
+		y = 7
+
+	}
+	focus = {
+		id = JAP_research_collaboration
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_northern_japan
+		}
+		x = 8
+		y = 8
+
+	}
+	focus = {
+		id = JAP_research_warfare
+		icon = GFX_focus_research
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_research_collaboration
+		}
+		x = 8
+		y = 9
+
+	}
+	focus = {
+		id = JAP_pursue_nuclear_technology
+		icon = GFX_focus_wonderweapons
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_research_collaboration
+		}
+		x = 6
+		y = 9
+
+	}
+	focus = {
+		id = JAP_rocket_science
+		icon = GFX_focus_rocketry
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_research_collaboration
+		}
+		x = 10
+		y = 9
+
+	}
+	focus = {
+		id = JAP_faction_research_treaty
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_pursue_nuclear_technology
+		}
+		prerequisite = {
+			focus = JAP_research_warfare
+		}
+		prerequisite = {
+			focus = JAP_rocket_science
+		}
+		x = 8
+		y = 10
+
+	}
+	focus = {
 		id = JAP_invest_in_asia
 		icon = GFX_JAP_invest_in_asia
 		cost = 10.00
@@ -229,6 +308,17 @@ focus_tree = {
 
 	}
 	focus = {
+		id = JAP_invest_in_korea
+		icon = GFX_JAP_modernize_korean_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_korean_infrastructure
+		}
+		x = 11
+		y = 7
+
+	}
+	focus = {
 		id = JAP_modernize_chinese_infrastructure
 		icon = GFX_JAP_modernize_chinese_infrastructure
 		cost = 10.00
@@ -249,6 +339,42 @@ focus_tree = {
 		}
 		x = 12
 		y = 6
+
+	}
+	focus = {
+		id = JAP_invest_in_subjects
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_subject_infrastructure
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = JAP_subject_research_treaty
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_subjects
+		}
+		prerequisite = {
+			focus = JAP_research_warfare
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = JAP_invest_in_china
+		icon = GFX_JAP_modernize_chinese_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_chinese_infrastructure
+		}
+		x = 13
+		y = 7
 
 	}
 	focus = {
@@ -274,21 +400,6 @@ focus_tree = {
 			focus = JAP_prosper_steel
 		}
 		x = 2
-		y = 7
-
-	}
-	focus = {
-		id = JAP_prosper_rubber
-		icon = GFX_focus_generic_rubber
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_expand_rubber_plantations
-		}
-		mutually_exclusive = {
-			focus = JAP_prosper_oil
-			focus = JAP_prosper_steel
-		}
-		x = 4
 		y = 7
 
 	}
@@ -319,17 +430,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = JAP_invest_in_northern_japan
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_invest_in_the_nation
-		}
-		x = 8
-		y = 7
-
-	}
-	focus = {
 		id = JAP_the_chinese_project
 		icon = GFX_focus_jap_manchurian_project
 		cost = 10.00
@@ -341,25 +441,45 @@ focus_tree = {
 
 	}
 	focus = {
-		id = JAP_invest_in_korea
-		icon = GFX_JAP_modernize_korean_infrastructure
+		id = JAP_post_war_science
+		icon = GFX_focus_research2
 		cost = 10.00
 		prerequisite = {
-			focus = JAP_modernize_korean_infrastructure
+			focus = JAP_faction_research_treaty
 		}
-		x = 11
-		y = 7
+		prerequisite = {
+			focus = JAP_subject_research_treaty
+		}
+		x = 10
+		y = 11
 
 	}
 	focus = {
-		id = JAP_invest_in_china
-		icon = GFX_JAP_modernize_chinese_infrastructure
+		id = JAP_operation_kankoku_o_mamoru
+		icon = GFX_JAP_operation_kankoku_o_mamoru
 		cost = 10.00
 		prerequisite = {
-			focus = JAP_modernize_chinese_infrastructure
+			focus = JAP_the_korean_project
 		}
-		x = 13
-		y = 7
+		prerequisite = {
+			focus = JAP_invest_in_korea
+		}
+		x = 10
+		y = 8
+
+	}
+	focus = {
+		id = JAP_operation_chugoku_o_mamoru
+		icon = GFX_JAP_operation_chugoku_o_mamoru
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_the_chinese_project
+		}
+		prerequisite = {
+			focus = JAP_invest_in_china
+		}
+		x = 14
+		y = 8
 
 	}
 }
