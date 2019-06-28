@@ -77,3 +77,8 @@ l_english:
  JAP_conquer_china_focus_desc:0 "The Treaty of Kyoto must be a joke. We did not get the land we deserved, instead we were only given one sliver of land. This is outrageous! We must begin plans to conquer China and get the land we rightly earned ourselves, whether the world likes it or not."
  JAP_stage_a_coup:0 "Begin the Revolution"
  JAP_stage_a_coup_desc:0 "Comrades, it is time. Time to start the Japanese Revolution! Today we march on the streets of Japan, today we overthrow the empire. Today we begin the Revolution and bring Japan to a path of victory and prosperity. Glory to the revolution!"
+ 
+  ### Custom Effect Tool-tips ###
+ JAP_faction_research_treaty_tt:0 "§YYou§! and §Yyour faction members§! will receive §Gresearch bonuses in various technologies§!."
+ JAP_modernize_subject_infrastructure_tt:0 "Your §Ysubjects§! will add some §YInfrastructure§! in their owned states."
+ JAP_subject_research_treaty_tt:0 "§YYour subjects§! will receive §Gresearch bonuses in some technologies§!."
