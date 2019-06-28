@@ -2,18 +2,18 @@ capital = 282
 
 oob = "JAP_1936"
 
-set_stability = 0.2 #baseline, THE EMPEROR PROTECTS
-set_war_support = 0.8
+set_stability = 0.102 #baseline, THE EMPEROR PROTECTS
+set_war_support = 0.5
 
 set_research_slots = 4
 
 add_ideas = {
-	state_shintoism
 	limited_exports
 	limited_conscription
 	partial_economic_mobilisation
 
-	JAP_zaibatsus
+	JAP_unpopular_army
+	JAP_unmodernized_industry
 	JAP_duplicate_research_efforts
 	JAP_militarism
 }
