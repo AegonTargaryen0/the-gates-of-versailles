@@ -14,8 +14,6 @@ add_ideas = {
 
 	JAP_unpopular_army
 	JAP_unmodernized_industry
-	JAP_duplicate_research_efforts
-	JAP_militarism
 }
 
 if = {
