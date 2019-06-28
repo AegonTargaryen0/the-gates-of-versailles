@@ -99,13 +99,14 @@ bookmarks = {
 			history = "ITA_THE_GATES_OF_VERSAILLES_DESC"
 			ideology = fascism
 			ideas = {
-				vittoria_mutilata
-				victor_emmanuel
+				confused_government
+				victor_emmanuel_versailles
+				novus_imperium_romanum
 			}	
 			focuses = {
-				ITA_pact_of_steel
-				ITA_spanish_italian_faction
-				ITA_italy_first
+				ITA_strenghten_mussolinis_power
+				ITA_form_the_italian_middle_east
+				ITA_unification_of_italy
 			}		
 		}
 		"JAP"={
