@@ -3,18 +3,26 @@ focus_tree = {
 	country = {
 		factor = 0
 		modifier = {
-			add = 10
+			add = 100
 			tag = JAP
 		}
 	}
 	default = no
+	continuous_focus_position = { x = 150 y = 1500 }
+	
 	focus = {
 		id = JAP_modernize_the_industry
 		icon = GFX_JAP_modernize_the_industry
 		cost = 10.00
 		x = 4
 		y = 0
-
+		available_if_capitulated = yes
+        completion_reward = {
+		    swap_ideas = {
+			    remove_idea = JAP_unmodernized_industry
+				add_idea = JAP_modernized_industry
+			}
+		}
 	}
 	focus = {
 		id = JAP_rebuild_military_factories
@@ -25,6 +33,60 @@ focus_tree = {
 		}
 		x = 1
 		y = 1
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -36,6 +98,60 @@ focus_tree = {
 		}
 		x = 1
 		y = 3
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -47,6 +163,61 @@ focus_tree = {
 		}
 		x = 1
 		y = 5
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 3
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+		    army_experience = 25
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -58,6 +229,67 @@ focus_tree = {
 		}
 		x = 4
 		y = 1
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -69,6 +301,67 @@ focus_tree = {
 		}
 		x = 4
 		y = 3
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -80,6 +373,26 @@ focus_tree = {
 		}
 		x = 4
 		y = 5
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+			        type = steel
+				    amount = 2
+				    state = ROOT
+			    }
+				add_resource = {
+			        type = oil
+				    amount = 2
+				    state = ROOT
+			    }
+				add_resource = {
+			        type = rubber
+				    amount = 2
+				    state = ROOT
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -91,6 +404,16 @@ focus_tree = {
 		}
 		x = 2
 		y = 6
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+				add_resource = {
+			        type = oil
+				    amount = 4
+				    state = ROOT
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -102,6 +425,755 @@ focus_tree = {
 		}
 		x = 4
 		y = 6
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+				add_resource = {
+			        type = rubber
+				    amount = 4
+				    state = ROOT
+			    }
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_rebuild_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_the_industry
+		}
+		x = 7
+		y = 1
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_modernize_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_rebuild_infrastructure
+		}
+		x = 7
+		y = 2
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_continue_modernizing_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_infrastructure
+		}
+		x = 6
+		y = 3
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_invest_in_infrastructure
+		icon = GFX_JAP_invest_in_infrastructure
+		cost = 15.00
+		prerequisite = {
+			focus = JAP_modernize_infrastructure
+		}
+		x = 9
+		y = 3
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 4
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 3
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 3
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_invest_in_ourselves
+		icon = GFX_JAP_invest_in_ourselves
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_infrastructure
+		}
+		mutually_exclusive = {
+			focus = JAP_invest_in_asia
+		}
+		x = 8
+		y = 4
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_construct_infrastructure_in_weihavei
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_ourselves
+		}
+		x = 8
+		y = 5
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				844 = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			844 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_invest_in_the_nation
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 50.00
+		prerequisite = {
+			focus = JAP_construct_infrastructure_in_weihavei
+		}
+		x = 8
+		y = 6
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_invest_in_asia
+		icon = GFX_JAP_invest_in_asia
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_infrastructure
+		}
+		mutually_exclusive = {
+			focus = JAP_invest_in_ourselves
+		}
+		x = 12
+		y = 4
+
+	}
+	focus = {
+		id = JAP_modernize_korean_infrastructure
+		icon = GFX_JAP_modernize_korean_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_asia
+		}
+		x = 11
+		y = 5
+
+	}
+	focus = {
+		id = JAP_the_korean_project
+		icon = GFX_focus_jap_manchurian_project
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_korean_infrastructure
+		}
+		x = 10
+		y = 6
+
+	}
+	focus = {
+		id = JAP_modernize_chinese_infrastructure
+		icon = GFX_JAP_modernize_chinese_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_asia
+		}
+		x = 13
+		y = 5
+
+	}
+	focus = {
+		id = JAP_modernize_subject_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_korean_infrastructure
+			focus = JAP_modernize_chinese_infrastructure
+		}
+		x = 12
+		y = 6
+
+	}
+	focus = {
+		id = JAP_invest_in_subjects
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_modernize_subject_infrastructure
+		}
+		x = 12
+		y = 8
+
+	}
+	focus = {
+		id = JAP_subject_research_treaty
+		icon = GFX_goal_generic_scientific_exchange
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_invest_in_subjects
+		}
+		prerequisite = {
+			focus = JAP_research_warfare
+		}
+		x = 12
+		y = 10
+
+	}
+	focus = {
+		id = JAP_develop_iron_mines
+		icon = GFX_focus_generic_steel
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_prosper_for_resources
+		}
+		x = 6
+		y = 6
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+			        type = steel
+				    amount = 4
+				    state = ROOT
+			    }
+			}
+		}
+
+	}
+	focus = {
+		id = JAP_prosper_oil
+		icon = GFX_goal_generic_oil_refinery
+		cost = 10.00
+		prerequisite = {
+			focus = JAP_develop_oil_fields
+		}
+		mutually_exclusive = {
+			focus = JAP_prosper_rubber
+			focus = JAP_prosper_steel
+		}
+		x = 2
+		y = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+				add_resource = {
+			        type = oil
+				    amount = 6
+				    state = ROOT
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -117,86 +1189,52 @@ focus_tree = {
 		}
 		x = 4
 		y = 7
-
-	}
-	focus = {
-		id = JAP_rebuild_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_modernize_the_industry
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+				add_resource = {
+			        type = rubber
+				    amount = 6
+				    state = ROOT
+			    }
+			}
 		}
-		x = 7
-		y = 1
 
 	}
 	focus = {
-		id = JAP_modernize_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
+		id = JAP_prosper_steel
+		icon = GFX_focus_generic_steel
 		cost = 10.00
 		prerequisite = {
-			focus = JAP_rebuild_infrastructure
-		}
-		x = 7
-		y = 2
-
-	}
-	focus = {
-		id = JAP_continue_modernizing_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_modernize_infrastructure
-		}
-		x = 6
-		y = 3
-
-	}
-	focus = {
-		id = JAP_invest_in_infrastructure
-		icon = GFX_JAP_invest_in_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_modernize_infrastructure
-		}
-		x = 9
-		y = 3
-
-	}
-	focus = {
-		id = JAP_invest_in_ourselves
-		icon = GFX_JAP_invest_in_ourselves
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_invest_in_infrastructure
+			focus = JAP_develop_iron_mines
 		}
 		mutually_exclusive = {
-			focus = JAP_invest_in_asia
+			focus = JAP_prosper_oil
+			focus = JAP_prosper_rubber
 		}
-		x = 8
-		y = 4
+		x = 6
+		y = 7
+		available_if_capitulated = yes
+		completion_reward = {
+		    random_owned_controlled_state = {
+		        add_resource = {
+			        type = steel
+				    amount = 6
+				    state = ROOT
+			    }
+			}
+		}
 
 	}
 	focus = {
-		id = JAP_construct_infrastructure_in_weihavei
-		icon = GFX_goal_generic_construct_infrastructure
+		id = JAP_national_infrastructure_act
+		icon = GFX_goal_generic_construct_civilian
 		cost = 10.00
 		prerequisite = {
-			focus = JAP_invest_in_ourselves
+			focus = JAP_continue_modernizing_infrastructure
 		}
-		x = 8
+		x = 6
 		y = 5
-
-	}
-	focus = {
-		id = JAP_invest_in_the_nation
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 50.00
-		prerequisite = {
-			focus = JAP_construct_infrastructure_in_weihavei
-		}
-		x = 8
-		y = 6
 
 	}
 	focus = {
@@ -272,38 +1310,13 @@ focus_tree = {
 
 	}
 	focus = {
-		id = JAP_invest_in_asia
-		icon = GFX_JAP_invest_in_asia
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_invest_in_infrastructure
-		}
-		mutually_exclusive = {
-			focus = JAP_invest_in_ourselves
-		}
-		x = 12
-		y = 4
-
-	}
-	focus = {
-		id = JAP_modernize_korean_infrastructure
-		icon = GFX_JAP_modernize_korean_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_invest_in_asia
-		}
-		x = 11
-		y = 5
-
-	}
-	focus = {
-		id = JAP_the_korean_project
+		id = JAP_the_chinese_project
 		icon = GFX_focus_jap_manchurian_project
 		cost = 10.00
 		prerequisite = {
-			focus = JAP_modernize_korean_infrastructure
+			focus = JAP_modernize_chinese_infrastructure
 		}
-		x = 10
+		x = 14
 		y = 6
 
 	}
@@ -319,54 +1332,6 @@ focus_tree = {
 
 	}
 	focus = {
-		id = JAP_modernize_chinese_infrastructure
-		icon = GFX_JAP_modernize_chinese_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_invest_in_asia
-		}
-		x = 13
-		y = 5
-
-	}
-	focus = {
-		id = JAP_modernize_subject_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_modernize_korean_infrastructure
-			focus = JAP_modernize_chinese_infrastructure
-		}
-		x = 12
-		y = 6
-
-	}
-	focus = {
-		id = JAP_invest_in_subjects
-		icon = GFX_goal_generic_construct_infrastructure
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_modernize_subject_infrastructure
-		}
-		x = 12
-		y = 8
-
-	}
-	focus = {
-		id = JAP_subject_research_treaty
-		icon = GFX_goal_generic_scientific_exchange
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_invest_in_subjects
-		}
-		prerequisite = {
-			focus = JAP_research_warfare
-		}
-		x = 12
-		y = 10
-
-	}
-	focus = {
 		id = JAP_invest_in_china
 		icon = GFX_JAP_modernize_chinese_infrastructure
 		cost = 10.00
@@ -375,69 +1340,6 @@ focus_tree = {
 		}
 		x = 13
 		y = 7
-
-	}
-	focus = {
-		id = JAP_develop_iron_mines
-		icon = GFX_focus_generic_steel
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_prosper_for_resources
-		}
-		x = 6
-		y = 6
-
-	}
-	focus = {
-		id = JAP_prosper_oil
-		icon = GFX_goal_generic_oil_refinery
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_develop_oil_fields
-		}
-		mutually_exclusive = {
-			focus = JAP_prosper_rubber
-			focus = JAP_prosper_steel
-		}
-		x = 2
-		y = 7
-
-	}
-	focus = {
-		id = JAP_prosper_steel
-		icon = GFX_focus_generic_steel
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_develop_iron_mines
-		}
-		mutually_exclusive = {
-			focus = JAP_prosper_oil
-			focus = JAP_prosper_rubber
-		}
-		x = 6
-		y = 7
-
-	}
-	focus = {
-		id = JAP_national_infrastructure_act
-		icon = GFX_goal_generic_construct_civilian
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_continue_modernizing_infrastructure
-		}
-		x = 6
-		y = 5
-
-	}
-	focus = {
-		id = JAP_the_chinese_project
-		icon = GFX_focus_jap_manchurian_project
-		cost = 10.00
-		prerequisite = {
-			focus = JAP_modernize_chinese_infrastructure
-		}
-		x = 14
-		y = 6
 
 	}
 	focus = {
