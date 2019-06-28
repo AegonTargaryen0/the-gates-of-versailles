@@ -1058,6 +1058,23 @@ focus_tree = {
 		}
 		x = 12
 		y = 4
+		available_if_capitulated = yes
+		complete_tooltip = {
+		    add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+			}
+		}
+		completion_reward = {
+		    844 = {
+			    add_building_construction = {
+				    type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1067,8 +1084,72 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_invest_in_asia
 		}
+		available = {
+		    KOR = {
+			    is_subject_of = JAP
+			}
+		}
 		x = 11
 		y = 5
+		available_if_capitulated = no
+		completion_reward = {
+		    KOR = {
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 1
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 1
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }  
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+				    }
+			    }
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 2
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 2
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 3
+					    instant_build = yes
+				    }
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -1078,8 +1159,21 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_modernize_korean_infrastructure
 		}
+		available = {
+		    KOR = {
+			    is_subject_of = JAP
+			}
+		}
 		x = 10
 		y = 6
+		available_if_capitulated = no
+		completion_reward = {
+		    KOR = {
+			    add_stability = 0.10
+				add_war_support = 0.10
+				add_political_power = 150
+			}
+		}
 
 	}
 	focus = {
@@ -1089,8 +1183,72 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_invest_in_asia
 		}
+		available = {
+		    CHI = {
+			    is_subject_of = JAP
+			}
+		}
 		x = 13
 		y = 5
+		available_if_capitulated = no
+		completion_reward = {
+		    CHI = {
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 1
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 1
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }  
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+				    }
+			    }
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 2
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 2
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 3
+					    instant_build = yes
+				    }
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -1101,8 +1259,75 @@ focus_tree = {
 			focus = JAP_modernize_korean_infrastructure
 			focus = JAP_modernize_chinese_infrastructure
 		}
+		available = {
+			num_subjects > 1
+		}
 		x = 12
 		y = 6
+		completion_reward = {
+		    custom_effect_tooltip = JAP_modernize_subject_infrastructure_tt
+			
+			hidden_effect = {
+			    every_other_country = {
+			        limit = { is_subject_of = JAP }
+				
+				    random_owned_controlled_state = {
+				        limit = {
+					        free_building_slots = {
+						        building = infrastructure
+						        size > 1
+					        }
+					        OR = {
+						        is_in_home_area = yes
+						        NOT = {
+							        owner = {
+								        any_owned_state = {
+									        free_building_slots = {
+										        building = infrastructure
+										        size > 1
+									        }
+									        is_in_home_area = yes
+								        }
+							        }
+						        }
+					        }
+				        }  
+				        add_building_construction = {
+					        type = infrastructure
+					        level = 2
+					        instant_build = yes
+				        }
+			        }
+			            random_owned_controlled_state = {
+				            limit = {
+					            free_building_slots = {
+						        building = infrastructure
+						        size > 2
+					        }
+					        OR = {
+						        is_in_home_area = yes
+						        NOT = {
+							        owner = {
+								        any_owned_state = {
+									        free_building_slots = {
+										        building = infrastructure
+										        size > 2
+									        }
+									        is_in_home_area = yes
+								        }
+							        }
+						        }
+					        }
+				        }
+				        add_building_construction = {
+					        type = infrastructure
+					        level = 3
+					        instant_build = yes
+				        }
+			        }
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -1112,8 +1337,75 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_modernize_subject_infrastructure
 		}
+		available = {
+			num_subjects > 1
+		}
 		x = 12
 		y = 8
+		completion_reward = {
+		    custom_effect_tooltip = JAP_modernize_subject_infrastructure_tt
+			
+			hidden_effect = {
+			    every_other_country = {
+			        limit = { is_subject_of = JAP }
+				
+				    random_owned_controlled_state = {
+				        limit = {
+					        free_building_slots = {
+						        building = infrastructure
+						        size > 1
+					        }
+					        OR = {
+						        is_in_home_area = yes
+						        NOT = {
+							        owner = {
+								        any_owned_state = {
+									        free_building_slots = {
+										        building = infrastructure
+										        size > 1
+									        }
+									        is_in_home_area = yes
+								        }
+							        }
+						        }
+					        }
+				        }  
+				        add_building_construction = {
+					        type = infrastructure
+					        level = 2
+					        instant_build = yes
+				        }
+			        }
+			            random_owned_controlled_state = {
+				            limit = {
+					            free_building_slots = {
+						        building = infrastructure
+						        size > 2
+					        }
+					        OR = {
+						        is_in_home_area = yes
+						        NOT = {
+							        owner = {
+								        any_owned_state = {
+									        free_building_slots = {
+										        building = infrastructure
+										        size > 2
+									        }
+									        is_in_home_area = yes
+								        }
+							        }
+						        }
+					        }
+				        }
+				        add_building_construction = {
+					        type = infrastructure
+					        level = 3
+					        instant_build = yes
+				        }
+			        }
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -1126,8 +1418,45 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_research_warfare
 		}
+		available = {
+			num_subjects > 2
+		}
 		x = 12
 		y = 10
+		completion_reward = {
+		    custom_effect_tooltip = JAP_subject_research_treaty_tt
+			
+			hidden_effect = {
+			    every_other_country = {
+				    limit = { is_subject_of = JAP }
+					
+					add_tech_bonus = {
+			            name = subject_research_bonus_1
+				        bonus = 1.0
+				        uses = 2
+				        category = infantry_weapons
+			        }
+					add_tech_bonus = {
+			            name = subject_research_bonus_2
+				        bonus = 1.0
+				        uses = 3
+				        category = industry
+			        }
+					add_tech_bonus = {
+			            name = subject_research_bonus_3
+				        bonus = 1.0
+				        uses = 3
+				        category = electronics
+			        }
+					add_tech_bonus = {
+			            name = subject_research_bonus_4
+				        bonus = 1.5
+				        uses = 2
+				        category = land_doctrine
+			        }
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1235,6 +1564,153 @@ focus_tree = {
 		}
 		x = 6
 		y = 5
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 4
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 5
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 2
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 2
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 3
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 3
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 4
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 4
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 4
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 5
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1246,6 +1722,91 @@ focus_tree = {
 		}
 		x = 8
 		y = 7
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				536 = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+				535 = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+				534 = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+				533 = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 3
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+		    535 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			534 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			533 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+			536 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1257,6 +1818,10 @@ focus_tree = {
 		}
 		x = 8
 		y = 8
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_research_slot = 1
+		}
 
 	}
 	focus = {
@@ -1266,8 +1831,24 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_research_collaboration
 		}
+		available = {
+		    date > 1939.1.1
+		    has_war = yes
+		}
 		x = 8
 		y = 9
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_tech_bonus = {
+				name = warfare_research_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+				category = armor
+				category = land_doctrine
+			}
+		}
 
 	}
 	focus = {
@@ -1279,6 +1860,15 @@ focus_tree = {
 		}
 		x = 6
 		y = 9
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_tech_bonus = {
+			    name = nuclear_bonus
+				bonus = 1.0
+				uses = 1
+				category = nuclear
+			}
+		}
 
 	}
 	focus = {
@@ -1290,6 +1880,15 @@ focus_tree = {
 		}
 		x = 10
 		y = 9
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_tech_bonus = {
+			    name = nuclear_bonus
+				bonus = 1.0
+				uses = 1
+				category = rocketry
+			}
+		}
 
 	}
 	focus = {
@@ -1307,6 +1906,79 @@ focus_tree = {
 		}
 		x = 8
 		y = 10
+		available_if_capitulated = no
+		completion_reward = {
+		    custom_effect_tooltip = JAP_faction_research_treaty_tt
+			
+			hidden_effect = {
+			    every_country = {
+				    limit = { is_in_faction_with = JAP }
+					
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_1
+				        bonus = 1.0
+				        uses = 2
+				        category = infantry_weapons
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_2
+				        bonus = 1.0
+				        uses = 1
+				        category = artillery
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_3
+				        bonus = 1.0
+				        uses = 3
+				        category = armor
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_4
+				        bonus = 1.0
+				        uses = 3
+				        category = light_air
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_5
+				        bonus = 1.0
+				        uses = 2
+				        category = medium_air
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_6
+				        bonus = 1.0
+				        uses = 2
+				        category = heavy_air
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_7
+				        bonus = 1.0
+				        uses = 5
+				        category = industry
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_8
+				        bonus = 1.0
+				        uses = 4
+				        category = electronics
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_9
+				        bonus = 1.5
+				        uses = 2
+				        category = land_doctrine
+			        }
+					add_tech_bonus = {
+			            name = japanese_faction_bonus_10
+				        bonus = 1.0
+				        uses = 3
+				        category = computing_tech
+						category = encryption_tech
+						category = decryption_tech
+			        }
+				}
+			}
+		}
 
 	}
 	focus = {
@@ -1316,8 +1988,21 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_modernize_chinese_infrastructure
 		}
+		available = {
+		    CHI = {
+			    is_subject_of = JAP
+			}
+		}
 		x = 14
 		y = 6
+		available_if_capitulated = no
+		completion_reward = {
+		    CHI = {
+			    add_stability = 0.10
+				add_war_support = 0.10
+				add_political_power = 150
+			}
+		}
 
 	}
 	focus = {
@@ -1327,8 +2012,70 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_modernize_korean_infrastructure
 		}
+		available = {
+		    KOR = { is_subject_of = JAP }
+		}
 		x = 11
 		y = 7
+		available_if_capitulated = no
+		completion_reward = {
+		    KOR = {
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 1
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 1
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }  
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+				    }
+			    }
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 2
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 2
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 3
+					    instant_build = yes
+				    }
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -1338,8 +2085,70 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_modernize_chinese_infrastructure
 		}
+		available = {
+		    CHI = { is_subject_of = JAP }
+		}
 		x = 13
 		y = 7
+		available_if_capitulated = no
+		completion_reward = {
+		    CHI = {
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 1
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 1
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }  
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 2
+					    instant_build = yes
+				    }
+			    }
+			    random_owned_controlled_state = {
+				    limit = {
+					    free_building_slots = {
+						    building = infrastructure
+						    size > 2
+					    }
+					    OR = {
+						    is_in_home_area = yes
+						    NOT = {
+							    owner = {
+								    any_owned_state = {
+									    free_building_slots = {
+										    building = infrastructure
+										    size > 2
+									    }
+									    is_in_home_area = yes
+								    }
+							    }
+						    }
+					    }
+				    }
+				    add_building_construction = {
+					    type = infrastructure
+					    level = 3
+					    instant_build = yes
+				    }
+			    }
+			}
+		}
 
 	}
 	focus = {
@@ -1352,8 +2161,81 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_subject_research_treaty
 		}
+		available = {
+		    date > 1945.9.2
+			num_of_factories > 100
+		}
 		x = 10
 		y = 11
+		available_if_capitulated = yes
+		completion_reward = {
+		    add_tech_bonus = {
+			            name = japanese_research_bonus_1
+				        bonus = 1.0
+				        uses = 1
+				        category = infantry_weapons
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_2
+				        bonus = 1.0
+				        uses = 1
+				        category = artillery
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_3
+				        bonus = 1.0
+				        uses = 1
+				        category = armor
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_4
+				        bonus = 1.0
+				        uses = 1
+				        category = light_air
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_5
+				        bonus = 1.0
+				        uses = 1
+				        category = medium_air
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_6
+				        bonus = 1.0
+				        uses = 1
+				        category = heavy_air
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_7
+				        bonus = 1.0
+				        uses = 2
+				        category = industry
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_8
+				        bonus = 1.0
+				        uses = 1
+				        category = electronics
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_9
+				        bonus = 1.5
+				        uses = 3
+				        category = land_doctrine
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_10
+				        bonus = 1.0
+				        uses = 1
+				        category = jet_technology
+			        }
+					add_tech_bonus = {
+			            name = japanese_research_bonus_11
+				        bonus = 1.0
+				        uses = 1
+				        category = nuclear
+			        }
+		}
 
 	}
 	focus = {
@@ -1366,8 +2248,24 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_invest_in_korea
 		}
+		available = {
+		    KOR = { is_subject_of = JAP }
+			date > 1940.1.1
+		}
 		x = 10
 		y = 8
+		available_if_capitulated = yes
+		completion_reward = {
+		    KOR = {
+		        every_owned_state = {
+			        add_building_construction = {
+				        type = bunker
+					    level = 2
+					    instant_build = yes
+				    }
+			    }
+		    }
+		}
 
 	}
 	focus = {
@@ -1380,8 +2278,24 @@ focus_tree = {
 		prerequisite = {
 			focus = JAP_invest_in_china
 		}
+		available = {
+		    CHI = { is_subject_of = JAP }
+			date > 1940.1.1
+		}
 		x = 14
 		y = 8
+		available_if_capitulated = yes
+		completion_reward = {
+		    CHI = {
+		        every_owned_state = {
+			        add_building_construction = {
+				        type = bunker
+					    level = 2
+					    instant_build = yes
+				    }
+			    }
+		    }
+		}
 
 	}
 }
