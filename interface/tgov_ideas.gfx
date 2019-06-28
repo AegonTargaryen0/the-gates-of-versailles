@@ -77,4 +77,16 @@ spriteTypes = {
 		name = "GFX_idea_catholic_influence"
 		texturefile = "gfx/interface/ideas/poland_catholic_influence.dds"
 	}
+	spriteType = {
+	    name = "GFX_idea_unpopular_army"
+		texturefile = "gfx/interface/ideas/JAP_unpopular_army.dds"
+	}
+	spriteType = {
+	    name = "GFX_idea_unmodernized_industry"
+		texturefile = "gfx/interface/ideas/JAP_unmodernized_industry.dds"
+	}
+	spriteType = {
+	    name = "GFX_idea_modernized_industry"
+		texturefile = "gfx/interface/ideas/JAP_modernized_industry.dds"
+	}
 }
