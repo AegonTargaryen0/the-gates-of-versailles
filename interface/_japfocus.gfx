@@ -14,4 +14,34 @@ spriteTypes = {
 	    name = "GFX_JAP_focus_on_south_east_asia"
 		texturefile = "gfx/interface/goals/JAP_focus_on_south_east_asia.dds"
 	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_invest_in_asia"
+		texturefile = "gfx/interface/goals/JAP_invest_in_asia.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_invest_in_infrastructure"
+		texturefile = "gfx/interface/goals/JAP_invest_in_infrastructure.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_invest_in_ourselves"
+		texturefile = "gfx/interface/goals/JAP_invest_in_ourselves.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_modernize_chinese_infrastructure"
+		texturefile = "gfx/interface/goals/JAP_modernize_chinese_infrastructure.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_modernize_korean_infrastructure"
+		texturefile = "gfx/interface/goals/JAP_modernize_korean_infrastructure.dds"
+	}
+	
+	SpriteType = {
+	    name = "GFX_JAP_modernize_the_industry"
+		texturefile = "gfx/interface/goals/JAP_modernize_the_industry.dds"
+	}
 }
