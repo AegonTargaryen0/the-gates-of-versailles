@@ -251,4 +251,29 @@ spriteTypes = {
 	name = "GFX_goal_ita_unification_completed"
 	texturefile = "gfx/interface/goals/ita_unification_complete.dds"			
 	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_relive_the_first_republic"
+	texturefile = "gfx/interface/goals/ita_relive_the_first_republic.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_national_elections"
+	texturefile = "gfx/interface/goals/ita_national_elections.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_right_to_bear_arms"
+	texturefile = "gfx/interface/goals/ita_right_to_bare_arms.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_increase_individual_rights"
+	texturefile = "gfx/interface/goals/ita_increase_individual_freedom.dds"			
+	}
+	
+	SpriteType = {
+	name = "GFX_goal_ita_equal_rights_for_all_citizens"
+	texturefile = "gfx/interface/goals/ita_equal_rights_for_all_citizens.dds"			
+	}
 }

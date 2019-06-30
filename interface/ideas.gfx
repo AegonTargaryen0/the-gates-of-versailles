@@ -3842,8 +3842,52 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/third_italian_war_of_independence.dds"
 	}
 	spriteType = {
+		name = "GFX_idea_confused_government_1"
+		texturefile = "gfx/interface/ideas/ita_chaotic_government.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_democratic_government"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+	spriteType = {
 		name = "GFX_idea_ita_payments_for_south_tyrol"
 		texturefile = "gfx/interface/ideas/ita_payments_for_south_tyrol.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_right_to_bear_arms"
+		texturefile = "gfx/interface/ideas/generic_right_to_bear_arms.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_lower_business_tax"
+		texturefile = "gfx/interface/ideas/generic_lower_business_tax.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_increased_individual_freedoms"
+		texturefile = "gfx/interface/ideas/FRA_scw_intervention_nationalists_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_social_welfare"
+		texturefile = "gfx/interface/ideas/ita_social_welfare.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_business_regulations_increase"
+		texturefile = "gfx/interface/ideas/FRA_factory_strikes.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_equal_rights"
+		texturefile = "gfx/interface/ideas/generic_volunteer_expedition_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_abolished_private_property"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_government_controlled_economy"
+		texturefile = "gfx/interface/ideas/ita_government_controlled_economy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_ita_high_taxes_rich"
+		texturefile = "gfx/interface/ideas/idea_eng_tackle_capitalism.dds"
 	}
 	spriteType = {
 		name = "GFX_idea_catholic_influence"
