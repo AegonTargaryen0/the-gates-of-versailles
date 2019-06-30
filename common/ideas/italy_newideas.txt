@@ -756,5 +756,220 @@ ideas = {
 			   political_power_gain = -0.1
 			}
 	    }
+		
+		confused_government_1 = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2
+				war_support_factor = -0.2
+				political_power_gain = -0.7 
+				political_advisor_cost_factor = 0.50
+				trade_laws_cost_factor = 0.50
+				mobilization_laws_cost_factor = 0.50
+				economy_cost_factor = 0.35
+			}
+		}
+		
+		ita_democratic_government = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.10
+				liberal_drift = 0.10
+				social_democratic_drift = 0.10
+				democratic_acceptance = 85
+				liberal_acceptance = 85
+				social_democratic_acceptance = 85
+			}
+		}
+		
+		ita_right_to_bear_arms = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.10
+				surrender_limit = 0.15
+				conscription_factor = 0.05
+			}
+		}
+		
+		ita_lower_business_tax = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.2
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.15
+			}
+		}
+		
+		ita_increased_individual_freedoms = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+				research_speed_factor = 0.10
+			}
+		}
+		
+		ita_social_welfare = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.05
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		ita_business_regulations_increase = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.30
+				liberal_drift = 0.10
+				consumer_goods_factor = 0.10
+				production_factory_max_efficiency_factor = -0.15
+			}
+		}
+		
+		ita_equal_rights = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				research_speed_factor = 0.05
+				conscription_factor = 0.1
+			}
+		}
+		
+		ita_abolished_private_property = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+				social_democratic_drift = 0.10
+			}
+		}
+		
+		ita_government_controlled_economy = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.10
+				global_building_slots_factor = 0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		
+		ita_high_taxes_rich = {
+			
+			allowed = {
+				original_tag = ITA
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				research_speed_factor = 0.10
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
     }
 }

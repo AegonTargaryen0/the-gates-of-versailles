@@ -1,0 +1,25 @@
+ideas = {
+	country = {
+		nap_ita_war = {
+			
+			allowed = {
+				original_tag = NAP
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.1
+				political_power_gain = -0.5 
+				political_advisor_cost_factor = 0.25 
+				trade_laws_cost_factor = 0.25 
+				mobilization_laws_cost_factor = 0.25 
+				economy_cost_factor = 0.15 
+			}
+		}
+    }
+}
