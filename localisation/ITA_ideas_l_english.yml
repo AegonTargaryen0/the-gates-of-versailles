@@ -42,12 +42,28 @@
  ita_nap_war:0 "Third War of Italian Independence"
  ita_nap_war_desc:0 "We are at war with our own people that is why we must fight it with our own..."
  ita_payments_for_south_tyrol:0 "Payments for South Tryol"
+ confused_government_1:0 "Chaotic Government"
+ confused_government_1_desc:0 "With Mussolini gone our government has been truly chaotic. Legislation and policy are not our concern anymore and we must focus on the current situation in the government"
+ ita_democratic_government:0 "Democratic Transition"
+ ita_democratic_government_desc:0 "Our country is undergoing a democratic transition in which we improve the rights of our citizens, and the nation as a whole"
+ ita_right_to_bear_arms:0 "Right to Bear Arms"
+ ita_lower_business_tax:0 "Low Business Tax"
+ ita_increased_individual_freedoms:0 "Increased Individual Freedoms"
+ ita_social_welfare:0 "Social Welfare"
+ ita_business_regulations_increase:0 "High Business Tax"
+ ita_equal_rights:0 "Equal Rights"
+ ita_abolished_private_property:0 "Abolished Private Property"
+ ita_government_controlled_economy:0 "Government Controlled Economy"
+ ita_high_taxes_rich:0 "High Taxes on the Rich"
  #Ministers
  giorgio_amendola:0 "Giorgio Amendola"
  costantino_lazzari:0 "Constantino Lazzari"
  pietro_badoglio_versailles:0 "Pietro Badoglio"
  umberto_ii:0 "Umberto II"
  
+ #Naples#
+ nap_ita_war:0 "Third War of Italian Independence"
+ nap_ita_war_desc:0 "We are at war with our own people that is why we must fight it with our own..."
  #Austria
  AUS_paying_italy:0 "Payements to Italy"
  AUS_paying_italy_desc:0 "With Italy's help with our industry we have to pay them back in return."
