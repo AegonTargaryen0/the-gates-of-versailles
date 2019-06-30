@@ -17,10 +17,7 @@ country_event = {
 		name = italy.17.a
 		kill_country_leader = yes
 		AUS = { leave_faction = yes }
-		swap_ideas = {
-            remove_idea = confused_government
-            add_idea = unstable_government
-        }
+
 		set_politics = {
 			ruling_party = neutrality
 			elections_allowed = no
@@ -1114,9 +1111,7 @@ country_event = {# Naples Conference
 	ITA = {
 			country_event = { id = italy.56 days = 1 }
 	}
-	hidden_effect = {
 	add_ideas = nap_ita_war
-}
 
 }
 
@@ -1394,6 +1389,203 @@ country_event = {# Austrians Deny
         modifier = didnt_allow_south_tyrol
     }
 }
+}
+
+country_event = {# Democratic Elections
+	id = italy.66
+	title = italy.66.t
+	desc = italy.66.d
+	picture = GFX_report_event_election_vote
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # Conservative Victory
+		name = italy.66.a
+		ai_chance = {
+			factor = 50
+		}
+	add_political_power = 20
+	remove_ideas = confused_government_1
+	set_politics = {
+	ruling_party = democratic
+    }
+	add_popularity = {
+    ideology = democratic
+    popularity = 0.20
+}
+}
+
+    option = { # Liberal Victory
+		name = italy.66.b
+		ai_chance = {
+			factor = 30
+		}
+	add_political_power = 15
+	remove_ideas = confused_government_1
+	set_politics = {
+	ruling_party = liberal
+    }
+	add_popularity = {
+    ideology = liberal
+    popularity = 0.20
+}
+}
+
+    option = { # Social Democratic Victory
+		name = italy.66.c
+		ai_chance = {
+			factor = 20
+		}
+	add_political_power = 10
+	remove_ideas = confused_government_1
+	add_stability = -0.07
+	set_politics = {
+	ruling_party = social_democratic
+    }
+	add_popularity = {
+    ideology = social_democratic
+    popularity = 0.20
+}
+}
+
+}
+
+country_event = {# Request to join Continental Alliance
+	id = italy.67
+	title = italy.67.t
+	desc = italy.67.d
+	picture = GFX_report_event_canada_treaty
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # Agree
+		name = italy.67.a
+		ai_chance = {
+			factor = 80
+		}
+	ITA = {
+			country_event = { id = italy.68 days = 1 }
+		}
+}
+
+    option = { # Deny
+		name = italy.67.b
+		ai_chance = {
+			factor = 20
+		}
+	ITA = {
+			country_event = { id = italy.69 days = 1 }
+		}
+}
+}
+
+country_event = {# France says yes
+	id = italy.68
+	title = italy.68.t
+	desc = italy.68.d
+	picture = GFX_report_event_french_liberation
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # Yeet
+		name = italy.68.a
+	FRA = { add_to_faction = ITA }
+}
+
+}
+
+country_event = {# France says no
+	id = italy.69
+	title = italy.69.t
+	desc = italy.69.d
+	picture = GFX_report_event_riot_police_poland
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # REEEEEEEEE
+		name = italy.69.a
+	add_opinion_modifier = {
+        target = FRA
+        modifier = didnt_allow_to_join_faction 
+    }
+}
+
+}
+
+country_event = {# Request to join Allies
+	id = italy.70
+	title = italy.70.t
+	desc = italy.70.d
+	picture = GFX_report_event_poland_rejects
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # Agree
+		name = italy.70.a
+		ai_chance = {
+			factor = 85
+		}
+	ITA = {
+			country_event = { id = italy.71 days = 1 }
+		}
+}
+
+    option = { # Deny
+		name = italy.70.b
+		ai_chance = {
+			factor = 15
+		}
+	ITA = {
+			country_event = { id = italy.72 days = 1 }
+		}
+}
+}
+
+country_event = {# Britain says yes
+	id = italy.71
+	title = italy.71.t
+	desc = italy.71.d
+	picture = GFX_report_event_romania_parliament
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # Yeet
+		name = italy.71.a
+	ENG = { add_to_faction = ITA }
+}
+
+}
+
+country_event = {# Britain says no
+	id = italy.72
+	title = italy.72.t
+	desc = italy.72.d
+	picture = GFX_report_event_polish_tanks_01
+
+    is_triggered_only = yes
+
+    fire_only_once = yes
+
+	option = { # Yeet
+		name = italy.72.a
+	add_opinion_modifier = {
+        target = ENG
+        modifier = didnt_allow_to_join_faction 
+    }
+}
+
 }
 
 
