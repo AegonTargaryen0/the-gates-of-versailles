@@ -1170,6 +1170,10 @@ tag = ITA
 		id = ITA_strenghten_mussolinis_power
 		icon = GFX_goal_ita_support_mussolini
 		prerequisite = { focus = ITA_the_future_of_italy }
+		mutually_exclusive = { focus = ITA_overthrow_mussolini }
+		available = {
+		has_completed_focus = ITA_unification_of_italy
+		}
 		x = 31
 		y = 1
 		cost = 2
@@ -2040,4 +2044,304 @@ tag = ITA
 	}
 	
 	}
+	
+	focus = {
+		id = ITA_overthrow_mussolini
+		icon = GFX_focus_ger_assassinate_mussolini
+		prerequisite = { focus = ITA_the_future_of_italy }
+		mutually_exclusive = { focus = ITA_strenghten_mussolinis_power }
+		available = {
+		has_completed_focus = ITA_unification_of_italy
+		}
+		x = 55
+		y = 1
+		cost = 10
+		completion_reward = {
+		custom_effect_tooltip = overthrow_mussolini_tt
+		hidden_effect = {
+        ITA = {
+			country_event = { id = italy.17 hours = 6 }
+		}
+		swap_ideas = {
+        remove_idea = confused_government
+        add_idea = confused_government_1
+    }
+	}
+	}
+	}
+	
+	focus = {
+		id = ITA_relive_first_republic
+		icon = GFX_goal_ita_relive_the_first_republic
+		prerequisite = { focus = ITA_overthrow_mussolini }
+		x = 47
+		y = 2
+		cost = 5
+		completion_reward = {
+		custom_effect_tooltip = ita_democratic_government_tt
+		add_political_power = 50
+		add_ideas = ita_democratic_government
+	}
+	}
+	
+	focus = {
+		id = ITA_national_elections
+		icon = GFX_goal_ita_national_elections
+		prerequisite = { focus = ITA_relive_first_republic }
+		available = {
+		has_capitulated = no
+		}
+		x = 47
+		y = 3
+		cost = 10
+		completion_reward = {
+		ITA = {
+			country_event = { id = italy.66 days = 1 }
+		}
+	}
+	}
+	
+	focus = {
+		id = ITA_conservative_victory
+		icon = GFX_goal_support_democracy
+		prerequisite = { focus = ITA_national_elections }
+		available = {
+		has_government = democratic
+		}
+		x = 45
+		y = 4
+		cost = 1
+		completion_reward = {
+		add_political_power = 10
+	}
+	}
+	
+	focus = {
+		id = ITA_right_to_bear_arms
+		icon = GFX_goal_ita_right_to_bear_arms
+		prerequisite = { focus = ITA_conservative_victory }
+		available = {
+		has_government = democratic
+		}
+		x = 45
+		y = 5
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_right_to_bear_arms
+	}
+	}
+	
+	focus = {
+		id = ITA_lower_the_business_tax
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = ITA_right_to_bear_arms }
+		available = {
+		has_government = democratic
+		}
+		x = 45
+		y = 6
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_lower_business_tax
+	}
+	}
+	
+	focus = {
+		id = ITA_increase_individual_freedom
+		icon = GFX_goal_ita_increase_individual_rights
+		prerequisite = { focus = ITA_lower_the_business_tax }
+		available = {
+		has_government = democratic
+		}
+		x = 45
+		y = 7
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_increased_individual_freedoms
+	}
+	}
+	
+	focus = {
+		id = ITA_liberal_victory
+		icon = GFX_generic_liberal
+		prerequisite = { focus = ITA_national_elections }
+		available = {
+		has_government = liberal
+		}
+		x = 47
+		y = 4
+		cost = 1
+		completion_reward = {
+		add_political_power = 10
+	}
+	}
+	
+	focus = {
+		id = ITA_social_welfare
+		icon = GFX_generic_aid
+		prerequisite = { focus = ITA_liberal_victory }
+		available = {
+		has_government = liberal
+		}
+		x = 47
+		y = 5
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_social_welfare
+	}
+	}
+	
+	focus = {
+		id = ITA_increase_business_regulations
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = ITA_social_welfare }
+		available = {
+		has_government = liberal
+		}
+		x = 47
+		y = 6
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_business_regulations_increase
+	}
+	}
+	
+	focus = {
+		id = ITA_equal_rights_for_all
+    	icon = GFX_goal_ita_equal_rights_for_all_citizens
+		prerequisite = { focus = ITA_increase_business_regulations }
+		available = {
+		has_government = liberal
+		}
+		x = 47
+		y = 7
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_equal_rights
+	}
+	}
+	
+	focus = {
+		id = ITA_social_democratic_victory
+		icon = GFX_generic_social_democratic
+		prerequisite = { focus = ITA_national_elections }
+		available = {
+		has_government = social_democratic
+		}
+		x = 49
+		y = 4
+		cost = 1
+		completion_reward = {
+		add_political_power = 10
+	}
+	}
+	
+	focus = {
+		id = ITA_abolish_private_property
+		icon = GFX_focus_generic_strike_at_democracy2
+		prerequisite = { focus = ITA_social_democratic_victory }
+		available = {
+		has_government = social_democratic
+		}
+		x = 49
+		y = 5
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_abolished_private_property
+	}
+	}
+	
+	focus = {
+		id = ITA_government_controlled_industry
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = ITA_abolish_private_property }
+		available = {
+		has_government = social_democratic
+		}
+		x = 49
+		y = 6
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_government_controlled_economy
+	}
+	}
+	
+	focus = {
+		id = ITA_tax_the_rich
+		icon = GFX_focus_rom_parties_end
+		prerequisite = { focus = ITA_government_controlled_industry }
+		available = {
+		has_government = social_democratic
+		}
+		x = 49
+		y = 7
+		cost = 10
+		completion_reward = {
+		add_ideas = ita_high_taxes_rich
+	}
+	}
+	
+	focus = {
+		id = ITA_join_the_continental_alliance
+		icon = GFX_generic_deal_with_french
+		prerequisite = { focus = ITA_tax_the_rich focus = ITA_increase_individual_freedom focus = ITA_equal_rights_for_all }
+		mutually_exclusive = { focus = ITA_a_neutral_stance }
+		mutually_exclusive = { focus = ITA_join_british }
+		available = {
+		is_in_faction = no
+		FRA = { is_faction_leader = yes }
+		FRA = { has_war = no }
+		}
+		x = 45
+		y = 9
+		cost = 10
+		completion_reward = {
+		FRA = {
+			country_event = { id = italy.67 days = 1 }
+		}
+	}
+}
+
+    focus = {
+		id = ITA_a_neutral_stance
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = ITA_tax_the_rich focus = ITA_increase_individual_freedom focus = ITA_equal_rights_for_all }
+		mutually_exclusive = { focus = ITA_join_the_continental_alliance }
+		mutually_exclusive = { focus = ITA_join_british }
+		available = {
+		is_in_faction = no
+		}
+		x = 47
+		y = 9
+		cost = 10
+		completion_reward = {
+		add_ideas = neutrality_idea
+	}
+}
+
+    focus = {
+		id = ITA_join_british
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = { focus = ITA_tax_the_rich focus = ITA_increase_individual_freedom focus = ITA_equal_rights_for_all }
+		mutually_exclusive = { focus = ITA_a_neutral_stance }
+		mutually_exclusive = { focus = ITA_join_the_continental_alliance }
+		available = {
+		OR = {
+		has_government = democratic
+		has_government = liberal
+		has_government = social_democratic
+		}
+		is_in_faction = no
+		ENG = { is_faction_leader = yes }
+		ENG = { has_war = no }
+		}
+		x = 49
+		y = 9
+		cost = 10
+		completion_reward = {
+		ENG = {
+			country_event = { id = italy.70 days = 1 }
+		}
+	}
+}
    
