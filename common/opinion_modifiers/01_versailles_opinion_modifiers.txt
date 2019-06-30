@@ -83,6 +83,10 @@ opinion_modifiers = {
 	didnt_allow_south_tyrol = { value = -30 }
 }
 
+opinion_modifiers = {
+	didnt_allow_to_join_faction = { value = -30 }
+}
+
 #Ethiopia
 opinion_modifiers = {
 	anti_colonialist = { value = -50 }
