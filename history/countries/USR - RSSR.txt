@@ -1,6 +1,6 @@
-﻿capital = 249 #Kazan
+capital = 195 #Petrograd
 
-oob = "RUS_1936"
+oob = "USR_1936"
 
 set_research_slots = 3
 
@@ -45,76 +45,77 @@ set_politics = {
 		}
 
 		fascism = {
-			popularity = 30
+			popularity = 0
 		}
 		
 		communism = {
-			popularity = 0
+			popularity = 70
 		}
 		
 		neutrality = {
-			popularity = 65
+			popularity = 0
 		}
 		
 		social_democratic = {
-			popularity = 0
+			popularity = 20
 		}
 		
 		liberal = {
-			popularity = 0
+			popularity = 10
 		}
 		
 		monarchist = {
-			popularity = 5
+			popularity = 0
 		}
 	}
 	
-	ruling_party = neutrality
+	ruling_party = communism
 	last_election = "1935.9.8"
 	election_frequency = 36
 	elections_allowed = no
 }
 
 create_country_leader = {
-	name = "Pyotr Wrangel"
+	name = "Lev Kamenev"
 	desc = ""
-	picture = ""
+	picture = "Portrait_USR_Lev_Kamenev.dds"
 	expire = "1953.3.1"
-	ideology = military_junta
+	ideology = leninism
 	traits = {
 		
 	}
 }
 
 create_corps_commander = {
-	name = "Vladimir Nichiporovich"
-	picture = "Portrait_Russia_Vladimir_Nichiporovich.dds"
-	traits = { trait_reckless commando }
+	name = "Ilya Starinov"
+	picture = "Portrait_Soviet_Ilya_Starinov.dds"
+	traits = { commando skirmisher }
 	skill = 2
 	attack_skill = 2
-	defense_skill = 3
-	planning_skill = 1
-	logistics_skill = 4
-}
-
-create_corps_commander = {
-	name = "Dmitry Karbyshev"
-	picture = "Portrait_SOV_Dmitry_Karbyshev.dds"
-	traits = { trickster guerilla_fighter }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 4
+	defense_skill = 1
 	planning_skill = 3
-	logistics_skill = 1
+	logistics_skill = 2
 }
 
 create_corps_commander = {
-	name = "Vladimir Kryukov"
-	picture = "Portrait_Russia_Vladimir_Kryukov.dds"
-	traits = {  cavalry_officer }
+	name = "Vasily Blyukher"
+	picture = "Portrait_Russia_Vasily_Blyukher.dds"
+	traits = { infantry_officer  }
 	skill = 1
 	attack_skill = 2
 	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+}
+
+create_corps_commander = {
+	name = "Ivan Mikhailichenko"
+	picture = "Portrait_USSR_Ivan_Mikhailichenko.dds"
+	id = 698
+	traits = { land_ace }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
 	planning_skill = 2
 	logistics_skill = 1
 }
