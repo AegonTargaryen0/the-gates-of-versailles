@@ -1,0 +1,90 @@
+ideas = {
+	
+		country = {
+			
+		SOV_factionalism = {
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				#picture = poland_underdeveloped_economy
+
+				removal_cost = -1
+
+				modifier = {
+					political_power_factor = -0.15
+					stability_factor = -0.15
+			}
+		}
+
+		SOV_moscow_crash = {
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				#picture = poland_underdeveloped_economy
+
+				removal_cost = -1
+
+				modifier = {
+					industrial_capacity_factory = -0.1
+					production_factory_efficiency_gain_factor = -0.1
+					consumer_goods_factor = 0.1
+			}
+		}
+
+		SOV_mass_strikes = {
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				#picture = poland_underdeveloped_economy
+
+				removal_cost = -1
+
+				modifier = {
+					production_factory_max_efficiency_factor = -0.15
+					industrial_capacity_factory = -0.15
+			}
+		}
+
+		SOV_light_in_the_dark = {
+
+				allowed = {
+					original_tag = SOV
+					always = no
+				}
+
+				allowed_civil_war = {
+					always = no
+				}
+
+				#picture = poland_underdeveloped_economy
+
+				removal_cost = -1
+
+				modifier = {
+					stability_factor = 0.05
+					war_support_factor = 0.1
+			}
+		}
+	}
+}
