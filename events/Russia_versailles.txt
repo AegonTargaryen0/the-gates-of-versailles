@@ -1,0 +1,2277 @@
+﻿add_namespace = russia
+
+
+
+##GRAND COALITION
+country_event = {
+	id = russia.3
+	title = russia.3.t
+	desc = russia.3.d
+	picture = GFX_report_event_sov_grand_coalition
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.3.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = 0.05
+				add_political_power = -50
+
+				}
+			}
+
+##THIS ISN'T WORKING
+country_event = {
+	id = russia.4
+	title = russia.4.t
+	desc = russia.4.d
+	picture = GFX_report_event_sov_this_isnt_working
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.4.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = -0.1
+				add_political_power = -50
+
+	
+			}
+		}
+
+##ALEXEI DIES
+country_event = {
+	id = russia.5
+	title = russia.5.t
+	desc = russia.5.d
+	picture = GFX_report_event_sov_destroyed_kremlin
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.5.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = -0.1
+				add_political_power = -50
+
+				kill_country_leader = yes
+
+			create_country_leader = {
+				name = "No Government"
+				desc = ""
+				picture = "No_government_russia.dds"
+				expire = "1965.1.1"
+				ideology = centrism 
+				traits = {}
+				}
+			}
+		}
+
+
+##COMMUNIST
+country_event = {
+	id = russia.6
+	title = russia.6.t
+	desc = russia.6.d
+	picture = GFX_report_event_sov_takeover_of_duma
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.6.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = -0.1
+				add_political_power = -50
+
+				hidden_effect = {
+					country_event = {
+						days = 10
+						id = russia.1
+					}
+				}
+			}
+		}
+
+country_event = {
+	id = russia.1
+	title = russia.1.t
+	desc = russia.1.d
+	picture = GFX_report_event_sov_russian_civil_war
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.1.a
+		ai_chance = {
+			base = 10
+				}
+			hidden_effect = {
+				RUS = {
+					transfer_state = 249
+					transfer_state = 256
+					transfer_state = 399
+					transfer_state = 400
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 398
+					transfer_state = 581
+					transfer_state = 573
+					transfer_state = 651
+					transfer_state = 579
+					transfer_state = 580
+					transfer_state = 653
+					transfer_state = 403
+					transfer_state = 572
+
+					add_state_core = 249
+					add_state_core = 256
+					add_state_core = 399
+					add_state_core = 400
+					add_state_core = 397
+					add_state_core = 262
+					add_state_core = 398
+					add_state_core = 581
+					add_state_core = 573
+					add_state_core = 651
+					add_state_core = 579
+					add_state_core = 580
+					add_state_core = 653
+					add_state_core = 403
+					add_state_core = 572
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+					}
+				USR = {
+					transfer_state = 195
+					transfer_state = 208
+					transfer_state = 816
+					transfer_state = 209
+					transfer_state = 210
+					transfer_state = 263
+					transfer_state = 246
+					transfer_state = 244
+					transfer_state = 264
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 213
+					transfer_state = 722
+					transfer_state = 214
+					transfer_state = 351
+					transfer_state = 247
+					transfer_state = 248
+					transfer_state = 242
+					transfer_state = 219
+					transfer_state = 253
+					transfer_state = 252
+					transfer_state = 243
+					transfer_state = 241
+					transfer_state = 205
+					transfer_state = 223
+					transfer_state = 254
+					transfer_state = 224
+
+					add_state_core = 195
+					add_state_core = 208
+					add_state_core = 209
+					add_state_core = 210
+					add_state_core = 263
+					add_state_core = 246
+					add_state_core = 244
+					add_state_core = 264
+					add_state_core = 216
+					add_state_core = 215
+					add_state_core = 213
+					add_state_core = 722
+					add_state_core = 214
+					add_state_core = 351
+					add_state_core = 247
+					add_state_core = 248
+					add_state_core = 242
+					add_state_core = 219
+					add_state_core = 253
+					add_state_core = 252
+					add_state_core = 243
+					add_state_core = 241
+					add_state_core = 205
+					add_state_core = 223
+					add_state_core = 254
+					add_state_core = 224
+
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					country_event = {
+						days = 14
+						id = ruscivwar.70
+						}
+					country_event = {
+						days = 1
+						id = ruscivwar.6
+						}
+
+						change_tag_from = SOV
+
+						inherit_technology = SOV
+
+						add_equipment_to_stockpile = { 
+							type = infantry_equipment_1
+							amount = 5000
+							producer = SOV
+							}
+						add_equipment_to_stockpile = { 
+							type =  support_equipment_1
+							amount = 200
+							producer = SOV
+							}
+						add_equipment_to_stockpile = { 
+							type =  artillery_equipment_1
+							amount = 150
+						producer = SOV
+							}
+					army_experience = 50
+					add_timed_idea = { idea = USR_ready_and_prepared  days = 140 }
+					}
+				TSA = {
+					transfer_state = 408
+					transfer_state = 409
+					transfer_state = 655
+					transfer_state = 537
+					transfer_state = 555
+					transfer_state = 637
+					transfer_state = 650
+					transfer_state = 562
+					transfer_state = 644
+					transfer_state = 560
+					transfer_state = 657
+					transfer_state = 561
+					transfer_state = 574
+					transfer_state = 563
+					transfer_state = 564
+					transfer_state = 565
+					transfer_state = 575
+					transfer_state = 516
+					transfer_state = 566
+					transfer_state = 567
+					transfer_state = 576
+					transfer_state = 568
+					transfer_state = 569
+					transfer_state = 578
+					transfer_state = 577
+
+					add_state_core = 408
+					add_state_core = 409
+					add_state_core = 655
+					add_state_core = 537
+					add_state_core = 555
+					add_state_core = 637
+					add_state_core = 650
+					add_state_core = 562
+					add_state_core = 644
+					add_state_core = 560
+					add_state_core = 657
+					add_state_core = 561
+					add_state_core = 574
+					add_state_core = 563
+					add_state_core = 564
+					add_state_core = 565
+					add_state_core = 575
+					add_state_core = 516
+					add_state_core = 219
+					add_state_core = 566
+					add_state_core = 567
+					add_state_core = 576
+					add_state_core = 568
+					add_state_core = 569
+					add_state_core = 578
+					add_state_core = 577
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+					}
+
+				remove_ideas = SOV_factionalism
+				remove_ideas = SOV_mass_strikes
+
+				remove_from_faction = BLR
+				remove_from_faction = GEO
+
+		 	  	dismantle_faction = yes
+
+		 	  	remove_unit_leader = 700
+		 	  	remove_unit_leader = 701
+		 	  	remove_unit_leader = 702
+		 	  	remove_unit_leader = 703
+		 	  	remove_unit_leader = 704
+		 	  	remove_unit_leader = 705
+		 	  	remove_unit_leader = 706
+
+		 	  	set_rule = { 
+		 	  		can_puppet = no
+		 	  		}
+		 	  	set_rule = { 
+		 	  		can_force_government = no 
+		 	  		}
+
+		 	  	add_ideas = russian_civil_war
+
+		 	  	add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = communism
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = monarchist
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = fascism
+				popularity = -0.5
+			}
+
+				BLR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.1
+					}
+				}
+				UKR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.2
+					}
+				}
+				EST = {
+				country_event = {
+						days = 7
+						id = ruscivwar.3
+					}
+				}
+				FIN = {
+				country_event = {
+						days = 7
+						id = ruscivwar.4
+					}
+				}
+				JAP = {
+				country_event = {
+						days = 7
+						id = ruscivwar.5
+					}
+				}
+			}
+		}
+	}
+
+##DEMOCRATIC
+country_event = {
+	id = russia.7
+	title = russia.7.t
+	desc = russia.7.d
+	picture = GFX_report_event_sov_takeover_of_duma
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.7.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = -0.1
+				add_political_power = -50
+
+				hidden_effect = {
+					country_event = {
+						days = 10
+						id = russia.2
+					}
+				}
+			}
+		}
+
+country_event = {
+	id = russia.2
+	title = russia.2.t
+	desc = russia.2.d
+	picture = GFX_report_event_sov_russian_civil_war
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.2.a
+		ai_chance = {
+			base = 10
+				}
+			hidden_effect = {
+				RUS = {
+					transfer_state = 249
+					transfer_state = 256
+					transfer_state = 399
+					transfer_state = 400
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 398
+					transfer_state = 581
+					transfer_state = 573
+					transfer_state = 651
+					transfer_state = 579
+					transfer_state = 580
+					transfer_state = 653
+					transfer_state = 403
+					transfer_state = 572
+
+					add_state_core = 249
+					add_state_core = 256
+					add_state_core = 399
+					add_state_core = 400
+					add_state_core = 397
+					add_state_core = 262
+					add_state_core = 398
+					add_state_core = 581
+					add_state_core = 573
+					add_state_core = 651
+					add_state_core = 579
+					add_state_core = 580
+					add_state_core = 653
+					add_state_core = 403
+					add_state_core = 572
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+					}
+				USR = {
+					transfer_state = 195
+					transfer_state = 208
+					transfer_state = 816
+					transfer_state = 209
+					transfer_state = 210
+					transfer_state = 263
+					transfer_state = 246
+					transfer_state = 244
+					transfer_state = 264
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 213
+					transfer_state = 722
+					transfer_state = 214
+					transfer_state = 351
+					transfer_state = 247
+					transfer_state = 248
+					transfer_state = 242
+					transfer_state = 219
+					transfer_state = 253
+					transfer_state = 252
+					transfer_state = 243
+					transfer_state = 241
+					transfer_state = 205
+					transfer_state = 223
+					transfer_state = 254
+					transfer_state = 224
+
+					add_state_core = 195
+					add_state_core = 208
+					add_state_core = 209
+					add_state_core = 210
+					add_state_core = 263
+					add_state_core = 246
+					add_state_core = 244
+					add_state_core = 264
+					add_state_core = 216
+					add_state_core = 215
+					add_state_core = 213
+					add_state_core = 722
+					add_state_core = 214
+					add_state_core = 351
+					add_state_core = 247
+					add_state_core = 248
+					add_state_core = 242
+					add_state_core = 219
+					add_state_core = 253
+					add_state_core = 252
+					add_state_core = 243
+					add_state_core = 241
+					add_state_core = 205
+					add_state_core = 223
+					add_state_core = 254
+					add_state_core = 224
+
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					country_event = {
+						days = 1
+						id = ruscivwar.6
+						}
+						inherit_technology = SOV
+					}
+				TSA = {
+					transfer_state = 408
+					transfer_state = 409
+					transfer_state = 655
+					transfer_state = 537
+					transfer_state = 555
+					transfer_state = 637
+					transfer_state = 650
+					transfer_state = 562
+					transfer_state = 644
+					transfer_state = 560
+					transfer_state = 657
+					transfer_state = 561
+					transfer_state = 574
+					transfer_state = 563
+					transfer_state = 564
+					transfer_state = 565
+					transfer_state = 575
+					transfer_state = 516
+					transfer_state = 566
+					transfer_state = 567
+					transfer_state = 576
+					transfer_state = 568
+					transfer_state = 569
+					transfer_state = 578
+					transfer_state = 577
+
+					add_state_core = 408
+					add_state_core = 409
+					add_state_core = 655
+					add_state_core = 537
+					add_state_core = 555
+					add_state_core = 637
+					add_state_core = 650
+					add_state_core = 562
+					add_state_core = 644
+					add_state_core = 560
+					add_state_core = 657
+					add_state_core = 561
+					add_state_core = 574
+					add_state_core = 563
+					add_state_core = 564
+					add_state_core = 565
+					add_state_core = 575
+					add_state_core = 516
+					add_state_core = 219
+					add_state_core = 566
+					add_state_core = 567
+					add_state_core = 576
+					add_state_core = 568
+					add_state_core = 569
+					add_state_core = 578
+					add_state_core = 577
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+					}
+
+				remove_ideas = SOV_factionalism
+				remove_ideas = SOV_mass_strikes
+
+				remove_from_faction = BLR
+				remove_from_faction = GEO
+
+		 	  	dismantle_faction = yes
+
+		 	  	set_rule = { 
+		 	  		can_puppet = no
+		 	  		}
+		 	  	set_rule = { 
+		 	  		can_force_government = no 
+		 	  		}
+
+		 	  	country_event = {
+						days = 14
+						id = ruscivwar.70
+					}
+
+					add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = communism
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = monarchist
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = fascism
+				popularity = -0.5
+			}
+
+			add_equipment_to_stockpile = { 
+							type = infantry_equipment_1
+							amount = 5000
+							producer = SOV
+							}
+						add_equipment_to_stockpile = { 
+							type =  support_equipment_1
+							amount = 200
+							producer = SOV
+							}
+						add_equipment_to_stockpile = { 
+							type =  artillery_equipment_1
+							amount = 150
+						producer = SOV
+							}
+
+				BLR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.1
+					}
+				}
+				UKR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.2
+					}
+				}
+				EST = {
+				country_event = {
+						days = 7
+						id = ruscivwar.3
+					}
+				}
+				FIN = {
+				country_event = {
+						days = 7
+						id = ruscivwar.4
+					}
+				}
+				JAP = {
+				country_event = {
+						days = 7
+						id = ruscivwar.5
+					}
+				}
+			}
+		}
+	}
+##MILITARY
+country_event = {
+	id = russia.8
+	title = russia.8.t
+	desc = russia.8.d
+	picture = GFX_report_event_sov_takeover_of_duma
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.8.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = -0.1
+				add_political_power = -50
+
+					hidden_effect = {
+					country_event = {
+						days = 10
+						id = russia.10
+					}
+				}
+			}
+		}
+
+country_event = {
+	id = russia.10
+	title = russia.10.t
+	desc = russia.10.d
+	picture = GFX_report_event_sov_russian_civil_war
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.10.a
+		ai_chance = {
+			base = 10
+				}
+			hidden_effect = {
+				RUS = {
+					transfer_state = 249
+					transfer_state = 256
+					transfer_state = 399
+					transfer_state = 400
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 398
+					transfer_state = 581
+					transfer_state = 573
+					transfer_state = 651
+					transfer_state = 579
+					transfer_state = 580
+					transfer_state = 653
+					transfer_state = 403
+					transfer_state = 572
+
+					add_state_core = 249
+					add_state_core = 256
+					add_state_core = 399
+					add_state_core = 400
+					add_state_core = 397
+					add_state_core = 262
+					add_state_core = 398
+					add_state_core = 581
+					add_state_core = 573
+					add_state_core = 651
+					add_state_core = 579
+					add_state_core = 580
+					add_state_core = 653
+					add_state_core = 403
+					add_state_core = 572
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+
+					change_tag_from = SOV
+
+					load_oob = RUS_ReadyTheUrals
+
+					add_manpower = 100000
+					}
+				USR = {
+					transfer_state = 195
+					transfer_state = 208
+					transfer_state = 816
+					transfer_state = 209
+					transfer_state = 210
+					transfer_state = 263
+					transfer_state = 246
+					transfer_state = 244
+					transfer_state = 264
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 213
+					transfer_state = 722
+					transfer_state = 214
+					transfer_state = 351
+					transfer_state = 247
+					transfer_state = 248
+					transfer_state = 242
+					transfer_state = 219
+					transfer_state = 253
+					transfer_state = 252
+					transfer_state = 243
+					transfer_state = 241
+					transfer_state = 205
+					transfer_state = 223
+					transfer_state = 254
+					transfer_state = 224
+
+					add_state_core = 195
+					add_state_core = 208
+					add_state_core = 209
+					add_state_core = 210
+					add_state_core = 263
+					add_state_core = 246
+					add_state_core = 244
+					add_state_core = 264
+					add_state_core = 216
+					add_state_core = 215
+					add_state_core = 213
+					add_state_core = 722
+					add_state_core = 214
+					add_state_core = 351
+					add_state_core = 247
+					add_state_core = 248
+					add_state_core = 242
+					add_state_core = 219
+					add_state_core = 253
+					add_state_core = 252
+					add_state_core = 243
+					add_state_core = 241
+					add_state_core = 205
+					add_state_core = 223
+					add_state_core = 254
+					add_state_core = 224
+
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					country_event = {
+						days = 1
+						id = ruscivwar.6
+						}
+						inherit_technology = SOV
+					}
+				TSA = {
+					transfer_state = 408
+					transfer_state = 409
+					transfer_state = 655
+					transfer_state = 537
+					transfer_state = 555
+					transfer_state = 637
+					transfer_state = 650
+					transfer_state = 562
+					transfer_state = 644
+					transfer_state = 560
+					transfer_state = 657
+					transfer_state = 561
+					transfer_state = 574
+					transfer_state = 563
+					transfer_state = 564
+					transfer_state = 565
+					transfer_state = 575
+					transfer_state = 516
+					transfer_state = 566
+					transfer_state = 567
+					transfer_state = 576
+					transfer_state = 568
+					transfer_state = 569
+					transfer_state = 578
+					transfer_state = 577
+
+					add_state_core = 408
+					add_state_core = 409
+					add_state_core = 655
+					add_state_core = 537
+					add_state_core = 555
+					add_state_core = 637
+					add_state_core = 650
+					add_state_core = 562
+					add_state_core = 644
+					add_state_core = 560
+					add_state_core = 657
+					add_state_core = 561
+					add_state_core = 574
+					add_state_core = 563
+					add_state_core = 564
+					add_state_core = 565
+					add_state_core = 575
+					add_state_core = 516
+					add_state_core = 219
+					add_state_core = 566
+					add_state_core = 567
+					add_state_core = 576
+					add_state_core = 568
+					add_state_core = 569
+					add_state_core = 578
+					add_state_core = 577
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+					}
+
+				remove_ideas = SOV_factionalism
+				remove_ideas = SOV_mass_strikes
+
+				remove_from_faction = BLR
+				remove_from_faction = GEO
+
+		 	  	dismantle_faction = yes
+
+		 	  	set_rule = { 
+		 	  		can_puppet = no
+		 	  		}
+		 	  	set_rule = { 
+		 	  		can_force_government = no 
+		 	  		}
+
+		 	  	country_event = {
+						days = 14
+						id = ruscivwar.70
+					}
+
+					add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = communism
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = monarchist
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = fascism
+				popularity = -0.5
+			}
+
+				BLR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.1
+					}
+				}
+				UKR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.2
+					}
+				}
+				EST = {
+				country_event = {
+						days = 7
+						id = ruscivwar.3
+					}
+				}
+				FIN = {
+				country_event = {
+						days = 7
+						id = ruscivwar.4
+					}
+				}
+				JAP = {
+				country_event = {
+						days = 7
+						id = ruscivwar.5
+					}
+				}
+			}
+		}
+	}
+
+##TSARIST
+country_event = {
+	id = russia.9
+	title = russia.9.t
+	desc = russia.9.d
+	picture = GFX_report_event_sov_takeover_of_duma
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.9.a
+		ai_chance = {
+			base = 10
+				}
+
+				add_stability = -0.15
+				add_political_power = -50
+
+				hidden_effect = {
+					country_event = {
+						days = 10
+						id = russia.11
+					}
+				}
+			}
+		}
+
+country_event = {
+	id = russia.11
+	title = russia.11.t
+	desc = russia.11.d
+	picture = GFX_report_event_sov_russian_civil_war
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = russia.11.a
+		ai_chance = {
+			base = 10
+				}
+			hidden_effect = {
+				RUS = {
+					transfer_state = 249
+					transfer_state = 256
+					transfer_state = 399
+					transfer_state = 400
+					transfer_state = 397
+					transfer_state = 262
+					transfer_state = 398
+					transfer_state = 581
+					transfer_state = 573
+					transfer_state = 651
+					transfer_state = 579
+					transfer_state = 580
+					transfer_state = 653
+					transfer_state = 403
+					transfer_state = 572
+
+					add_state_core = 249
+					add_state_core = 256
+					add_state_core = 399
+					add_state_core = 400
+					add_state_core = 397
+					add_state_core = 262
+					add_state_core = 398
+					add_state_core = 581
+					add_state_core = 573
+					add_state_core = 651
+					add_state_core = 579
+					add_state_core = 580
+					add_state_core = 653
+					add_state_core = 403
+					add_state_core = 572
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+
+					change_tag_from = SOV
+					}
+				USR = {
+					transfer_state = 195
+					transfer_state = 208
+					transfer_state = 816
+					transfer_state = 209
+					transfer_state = 210
+					transfer_state = 263
+					transfer_state = 246
+					transfer_state = 244
+					transfer_state = 264
+					transfer_state = 216
+					transfer_state = 215
+					transfer_state = 213
+					transfer_state = 722
+					transfer_state = 214
+					transfer_state = 351
+					transfer_state = 247
+					transfer_state = 248
+					transfer_state = 242
+					transfer_state = 219
+					transfer_state = 253
+					transfer_state = 252
+					transfer_state = 243
+					transfer_state = 241
+					transfer_state = 205
+					transfer_state = 223
+					transfer_state = 254
+					transfer_state = 224
+
+					add_state_core = 195
+					add_state_core = 208
+					add_state_core = 209
+					add_state_core = 210
+					add_state_core = 263
+					add_state_core = 246
+					add_state_core = 244
+					add_state_core = 264
+					add_state_core = 216
+					add_state_core = 215
+					add_state_core = 213
+					add_state_core = 722
+					add_state_core = 214
+					add_state_core = 351
+					add_state_core = 247
+					add_state_core = 248
+					add_state_core = 242
+					add_state_core = 219
+					add_state_core = 253
+					add_state_core = 252
+					add_state_core = 243
+					add_state_core = 241
+					add_state_core = 205
+					add_state_core = 223
+					add_state_core = 254
+					add_state_core = 224
+
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+					add_state_claim = 408
+					add_state_claim = 409
+					add_state_claim = 655
+					add_state_claim = 537
+					add_state_claim = 555
+					add_state_claim = 637
+					add_state_claim = 650
+					add_state_claim = 562
+					add_state_claim = 644
+					add_state_claim = 560
+					add_state_claim = 657
+					add_state_claim = 561
+					add_state_claim = 574
+					add_state_claim = 563
+					add_state_claim = 564
+					add_state_claim = 565
+					add_state_claim = 575
+					add_state_claim = 516
+					add_state_claim = 566
+					add_state_claim = 567
+					add_state_claim = 576
+					add_state_claim = 568
+					add_state_claim = 569
+					add_state_claim = 578
+					add_state_claim = 577
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					country_event = {
+						days = 1
+						id = ruscivwar.6
+						}
+						inherit_technology = SOV
+					}
+				TSA = {
+					transfer_state = 408
+					transfer_state = 409
+					transfer_state = 655
+					transfer_state = 537
+					transfer_state = 555
+					transfer_state = 637
+					transfer_state = 650
+					transfer_state = 562
+					transfer_state = 644
+					transfer_state = 560
+					transfer_state = 657
+					transfer_state = 561
+					transfer_state = 574
+					transfer_state = 563
+					transfer_state = 564
+					transfer_state = 565
+					transfer_state = 575
+					transfer_state = 516
+					transfer_state = 566
+					transfer_state = 567
+					transfer_state = 576
+					transfer_state = 568
+					transfer_state = 569
+					transfer_state = 578
+					transfer_state = 577
+
+					add_state_core = 408
+					add_state_core = 409
+					add_state_core = 655
+					add_state_core = 537
+					add_state_core = 555
+					add_state_core = 637
+					add_state_core = 650
+					add_state_core = 562
+					add_state_core = 644
+					add_state_core = 560
+					add_state_core = 657
+					add_state_core = 561
+					add_state_core = 574
+					add_state_core = 563
+					add_state_core = 564
+					add_state_core = 565
+					add_state_core = 575
+					add_state_core = 516
+					add_state_core = 219
+					add_state_core = 566
+					add_state_core = 567
+					add_state_core = 576
+					add_state_core = 568
+					add_state_core = 569
+					add_state_core = 578
+					add_state_core = 577
+
+					add_state_claim = 195
+					add_state_claim = 208
+					add_state_claim = 816
+					add_state_claim = 209
+					add_state_claim = 210
+					add_state_claim = 263
+					add_state_claim = 246
+					add_state_claim = 244
+					add_state_claim = 264
+					add_state_claim = 216
+					add_state_claim = 215
+					add_state_claim = 213
+					add_state_claim = 722
+					add_state_claim = 214
+					add_state_claim = 351
+					add_state_claim = 247
+					add_state_claim = 248
+					add_state_claim = 242
+					add_state_claim = 219
+					add_state_claim = 253
+					add_state_claim = 252
+					add_state_claim = 243
+					add_state_claim = 241
+					add_state_claim = 205
+					add_state_claim = 223
+					add_state_claim = 254
+					add_state_claim = 224
+					add_state_claim = 249
+					add_state_claim = 256
+					add_state_claim = 399
+					add_state_claim = 400
+					add_state_claim = 397
+					add_state_claim = 262
+					add_state_claim = 398
+					add_state_claim = 581
+					add_state_claim = 573
+					add_state_claim = 651
+					add_state_claim = 579
+					add_state_claim = 580
+					add_state_claim = 653
+					add_state_claim = 403
+					add_state_claim = 572
+
+					add_state_claim = 232
+					add_state_claim = 233
+					add_state_claim = 235
+					add_state_claim = 234
+					add_state_claim = 238
+					add_state_claim = 237
+					add_state_claim = 218
+					add_state_claim = 245
+					add_state_claim = 217
+					add_state_claim = 236
+					add_state_claim = 265
+					add_state_claim = 260
+					add_state_claim = 240
+					add_state_claim = 220
+					add_state_claim = 222
+					add_state_claim = 258
+					add_state_claim = 257
+					add_state_claim = 239
+					add_state_claim = 250
+					add_state_claim = 255
+					add_state_claim = 401
+					add_state_claim = 251
+					add_state_claim = 652
+					add_state_claim = 407
+					add_state_claim = 406
+					add_state_claim = 582
+					add_state_claim = 402
+					add_state_claim = 587
+					add_state_claim = 584
+					add_state_claim = 585
+					add_state_claim = 405
+					add_state_claim = 742
+					add_state_claim = 732
+					add_state_claim = 586
+					add_state_claim = 589
+					add_state_claim = 404
+					add_state_claim = 583
+					add_state_claim = 590
+					add_state_claim = 588
+					add_state_claim = 571
+					add_state_claim = 654
+					add_state_claim = 40
+					add_state_claim = 570
+
+					inherit_technology = SOV
+
+					change_tag_from = SOV
+
+					add_manpower = 75000
+
+					load_oob = TSA_RideTheHorses
+					}
+
+				remove_ideas = SOV_factionalism
+				remove_ideas = SOV_mass_strikes
+
+				remove_from_faction = BLR
+				remove_from_faction = GEO
+
+		 	  	dismantle_faction = yes
+
+		 	  	set_rule = { 
+		 	  		can_puppet = no
+		 	  		}
+		 	  	set_rule = { 
+		 	  		can_force_government = no 
+		 	  		}
+
+		 	  	country_event = {
+						days = 14
+						id = ruscivwar.70
+					}
+
+					add_popularity = {
+				ideology = neutrality
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = communism
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = monarchist
+				popularity = -0.5
+			}
+				add_popularity = {
+				ideology = fascism
+				popularity = -0.5
+			}
+
+				BLR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.1
+					}
+				}
+				UKR = {
+				country_event = {
+						days = 7
+						id = ruscivwar.2
+					}
+				}
+				EST = {
+				country_event = {
+						days = 7
+						id = ruscivwar.3
+					}
+				}
+				FIN = {
+				country_event = {
+						days = 7
+						id = ruscivwar.4
+					}
+				}
+				JAP = {
+				country_event = {
+						days = 7
+						id = ruscivwar.5
+					}
+				}
+			}
+		}
+	}

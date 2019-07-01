@@ -1,0 +1,599 @@
+﻿add_namespace = ruscivwar
+
+country_event = {
+	id = ruscivwar.70
+	title = ruscivwar.70.t
+	desc = ruscivwar.70.d
+	
+	is_triggered_only = yes
+	
+	option = { # test
+		name = ruscivwar.70.a
+		ai_chance = {
+			base = 100
+				}
+			declare_war_on= { 
+				target = TSA
+				type = civil_war 
+			}
+			declare_war_on= { 
+				target = RUS
+				type = civil_war 
+			}
+			declare_war_on= { 
+				target = SOV
+				type = civil_war 
+			}
+
+			TSA = {
+				declare_war_on= { 
+				target = SOV
+				type = civil_war 
+			}
+				declare_war_on= { 
+				target = RUS
+				type = civil_war 
+			}
+
+			add_ideas = russian_civil_war
+		}
+			RUS = {
+				declare_war_on= { 
+				target = SOV
+				type = civil_war 
+			}
+
+			add_ideas = russian_civil_war
+		}
+
+			add_ideas = russian_civil_war
+
+			set_global_flag = russian_civil_war
+
+			SOV = {
+				add_ideas = russian_civil_war
+			}
+
+		}
+	}
+
+country_event = {
+	id = ruscivwar.1
+	title = ruscivwar.1.t
+	desc = ruscivwar.1.d
+	picture = GFX_report_event_RUScivilwar_invasion_pics
+	
+	is_triggered_only = yes
+	
+	option = { # yea
+	name = ruscivwar.1.a
+	ai_chance = {
+			base = 100
+				}
+			BLR = {
+				transfer_state = 241
+			}
+		}
+
+		option = { # no
+		name = ruscivwar.1.b
+		ai_chance = {
+			base = 1
+				}	
+			add_political_power = 25
+		}
+	}
+
+country_event = {
+	id = ruscivwar.2
+	title = ruscivwar.2.t
+	desc = ruscivwar.2.d
+	picture = GFX_report_event_RUScivilwar_invasion_pics
+	
+	is_triggered_only = yes
+	
+	option = { # yea
+	name = ruscivwar.2.a
+	ai_chance = {
+			base = 100
+				}
+			UKR = {
+				transfer_state = 137
+				transfer_state = 196
+				transfer_state = 200
+				transfer_state = 227
+				transfer_state = 221
+				transfer_state = 193
+				transfer_state = 225
+				transfer_state = 259
+				transfer_state = 228
+			}
+		}
+
+		option = { # no
+		name = ruscivwar.2.b
+		ai_chance = {
+			base = 1
+				}	
+			add_political_power = 25
+		}
+	}
+
+country_event = {
+	id = ruscivwar.3
+	title = ruscivwar.3.t
+	desc = ruscivwar.3.d
+	picture = GFX_report_event_RUScivilwar_invasion_pics
+	
+	is_triggered_only = yes
+	
+	option = { # yea
+	name = ruscivwar.3.a
+	ai_chance = {
+			base = 100
+				}
+			EST = {
+				transfer_state = 816
+			}
+		}
+
+		option = { # no
+		name = ruscivwar.3.b
+		ai_chance = {
+			base = 1
+				}	
+			add_political_power = 25
+		}
+	}
+
+country_event = {
+	id = ruscivwar.4
+	title = ruscivwar.4.t
+	desc = ruscivwar.4.d
+	picture = GFX_report_event_RUScivilwar_invasion_pics
+	
+	is_triggered_only = yes
+	
+	option = { # yea
+	name = ruscivwar.4.a
+	ai_chance = {
+			base = 100
+				}
+			FIN = {
+				transfer_state = 722
+				transfer_state = 213
+				transfer_state = 215
+				transfer_state = 216
+			}
+		}
+
+		option = { # no
+		name = ruscivwar.4.b
+		ai_chance = {
+			base = 1
+				}	
+			add_political_power = 25
+		}
+	}
+
+country_event = {
+	id = ruscivwar.5
+	title = ruscivwar.5.t
+	desc = ruscivwar.5.d
+	picture = GFX_report_event_RUScivilwar_invasion_pics
+	
+	is_triggered_only = yes
+	
+	option = { # yea
+	name = ruscivwar.5.a
+	ai_chance = {
+			base = 100
+				}
+			JAP = {
+				transfer_state = 537
+				transfer_state = 655
+				transfer_state = 555
+			}
+		}
+
+		option = { # no
+		name = ruscivwar.5.b
+		ai_chance = {
+			base = 1
+				}	
+			add_political_power = 25
+		}
+	}
+
+country_event = {
+	id = ruscivwar.6
+	title = ruscivwar.6.t
+	desc = ruscivwar.6.d
+
+	hidden = yes
+	
+	is_triggered_only = yes
+	
+	option = { # yea
+	name = ruscivwar.6.a
+	ai_chance = {
+			base = 100
+				}
+			load_oob = USR_1936
+
+			RUS = {
+				load_oob = RUS_1936
+			}	
+			TSA = {
+				load_oob = TSA_1936
+			}	
+		}
+	}
+
+##SOVIET UNION SURRENDER EVENT##
+
+country_event = {
+	id = ruscivwar.7
+	title = ruscivwar.7.t
+	desc = ruscivwar.7.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		SOV = {
+			surrender_progress > 0.9
+		}
+		USR = {
+			controls_state = 217
+			has_war_with = SOV
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.7.a
+	ai_chance = {
+			base = 100
+				}
+			USR = {
+				annex_country = { target = SOV }
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.8
+	title = ruscivwar.8.t
+	desc = ruscivwar.8.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		RUS = {
+			surrender_progress > 0.9
+		}
+		USR = {
+			controls_state = 249
+			has_war_with = RUS
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.8.a
+	ai_chance = {
+			base = 100
+				}
+			USR = {
+				annex_country = { target = RUS }	
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.9
+	title = ruscivwar.9.t
+	desc = ruscivwar.9.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		TSA = {
+			surrender_progress > 0.9
+		}
+		USR = {
+			controls_state = 408
+			has_war_with = TSA
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.9.a
+	ai_chance = {
+			base = 100
+				}
+			USR = {
+				annex_country = { target = TSA }	
+			}
+		}
+	}
+
+##MILITARY GOVERNMENT OF RUSSIA SURRENDER EVENTS
+
+country_event = {
+	id = ruscivwar.10
+	title = ruscivwar.10.t
+	desc = ruscivwar.10.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		SOV = {
+			surrender_progress > 0.9
+		}
+		RUS = {
+			controls_state = 217
+			has_war_with = SOV
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.10.a
+	ai_chance = {
+			base = 100
+				}
+			RUS = {
+				annex_country = { target = SOV }
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.11
+	title = ruscivwar.11.t
+	desc = ruscivwar.11.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		USR = {
+			surrender_progress > 0.9
+		}
+		RUS = {
+			controls_state = 195
+			has_war_with = USR
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.11.a
+	ai_chance = {
+			base = 100
+				}
+			RUS = {
+				annex_country = { target = USR }	
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.12
+	title = ruscivwar.12.t
+	desc = ruscivwar.12.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		TSA = {
+			surrender_progress > 0.9
+		}
+		RUS = {
+			controls_state = 408
+			has_war_with = TSA
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.12.a
+	ai_chance = {
+			base = 100
+				}
+			RUS = {
+				annex_country = { target = TSA }	
+			}
+		}
+	}
+
+##TSARDOM OF RUSSIA SURRENDER EVENTS
+
+country_event = {
+	id = ruscivwar.13
+	title = ruscivwar.13.t
+	desc = ruscivwar.13.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		SOV = {
+			surrender_progress > 0.9
+		}
+		TSA = {
+			controls_state = 217
+			has_war_with = SOV
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.13.a
+	ai_chance = {
+			base = 100
+				}
+			TSA = {
+				annex_country = { target = SOV }
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.14
+	title = ruscivwar.14.t
+	desc = ruscivwar.14.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		RUS = {
+			surrender_progress > 0.9
+		}
+		TSA = {
+			controls_state = 249
+			has_war_with = RUS
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.14.a
+	ai_chance = {
+			base = 100
+				}
+			TSA = {
+				annex_country = { target = RUS }	
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.15
+	title = ruscivwar.15.t
+	desc = ruscivwar.15.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		USR = {
+			surrender_progress > 0.9
+		}
+		TSA = {
+			controls_state = 408
+			has_war_with = 195
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.15.a
+	ai_chance = {
+			base = 100
+				}
+			TSA = {
+				annex_country = { target = USR }	
+			}
+		}
+	}
+
+##RUSSIAN FEDERATION SURRENDER EVENTS
+
+country_event = {
+	id = ruscivwar.16
+	title = ruscivwar.16.t
+	desc = ruscivwar.16.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		TSA = {
+			surrender_progress > 0.9
+		}
+		SOV = {
+			controls_state = 217
+			has_war_with = TSA
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.16.a
+	ai_chance = {
+			base = 100
+				}
+			SOV = {
+				annex_country = { target = TSA }
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.17
+	title = ruscivwar.17.t
+	desc = ruscivwar.17.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		RUS = {
+			surrender_progress > 0.9
+		}
+		SOV = {
+			controls_state = 249
+			has_war_with = RUS
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.17.a
+	ai_chance = {
+			base = 100
+				}
+			SOV = {
+				annex_country = { target = RUS }	
+			}
+		}
+	}
+
+country_event = {
+	id = ruscivwar.18
+	title = ruscivwar.18.t
+	desc = ruscivwar.18.d
+
+	hidden = yes
+
+	fire_only_once = yes
+	
+	trigger = {
+		USR = {
+			surrender_progress > 0.9
+		}
+		SOV = {
+			controls_state = 408
+			has_war_with = 195
+		}
+	}
+	
+	option = { # yea
+	name = ruscivwar.18.a
+	ai_chance = {
+			base = 100
+				}
+			SOV = {
+				annex_country = { target = USR }	
+			}
+		}
+	}
