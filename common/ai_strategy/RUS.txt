@@ -1,0 +1,60 @@
+russian_civil_war = {
+	enable = {
+		tag = RUS
+		RUS = {
+			has_war_with = USR
+			has_war_with = TSA
+			has_war_with = SOV
+		}
+	}
+
+	abort = {
+		has_war = no
+	}
+
+	ai_strategy = {
+		type = antagonize
+		id = "USR"
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "USR"
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "USR"
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "TSA"
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "TSA"
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "TSA"
+		value = 1000
+	}
+	ai_strategy = {
+		type = antagonize
+		id = "SOV"
+		value = 1000
+	}
+	ai_strategy = {
+		type = conquer
+		id = "SOV"
+		value = 1000
+	}
+	ai_strategy = {
+		type = invade
+		id = "SOV"
+		value = 1000
+	}
+}
