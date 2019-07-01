@@ -1,0 +1,540 @@
+﻿
+division_template = {
+	name = "Infantry"					
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+	}
+}
+
+division_template = {
+	name = "Tanks"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kavaleriya"		
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+   		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+   	division= {
+		name = "1. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "2. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "3. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "4. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "5. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "6. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "7. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "8. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "9. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "10. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "11. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "12. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "13. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "14. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "15. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "16. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "17. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "18. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "19. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "20. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "21. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "22. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "23. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "24. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "25. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "26. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "27. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "28. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "29. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "30. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "31. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "32. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "33. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "34. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "35. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "36. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "37. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "38. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "39. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "40. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "41. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "42. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "43. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "44. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "45. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "46. Pekhotnaya Diviziya"
+		location = 6338
+		division_template = "Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "1. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "2. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "3. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "4. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "5. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "6. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "7. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "8. Tankovaya Diviziya"
+		location = 6338
+		division_template = "Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "1. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "2. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "3. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "4. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "5. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "6. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "7. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "8. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "9. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "10. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "11. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "12. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "13. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "14. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "15. Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "16.Kavaleriya"
+		location = 6338
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	
+}
+	
+air_wings = {
+		
+}

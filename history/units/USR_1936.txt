@@ -1,0 +1,479 @@
+﻿division_template = {
+	name = "Militsiya"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+   		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = {
+	name = "People's Infantry"					
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+
+	}
+}
+
+division_template = {
+	name = "People's Tanks"
+
+	regiments = {
+		light_armor = { x = 0 y = 0 }
+		light_armor = { x = 0 y = 1 }
+		light_armor = { x = 0 y = 2 }
+		light_armor = { x = 1 y = 0 }
+		motorized = { x = 1 y = 1 }
+		motorized = { x = 1 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Kavaleriya"		
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+   		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+   	division= {
+		name = "1. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "2. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "3. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "4. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "5. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "6. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "7. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "8. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "9. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "10. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "11. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "12. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "13. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "14. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "15. Narodnaya Pekhota"
+		location = 6380
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "16. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "17. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "18. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "19. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "20. Narodnaya Pekhota"
+		location = 3151
+		division_template = "People's Infantry"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "1. Narodnyye Tanki"
+		location = 11375
+		division_template = "People's Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "2. Narodnyye Tanki"
+		location = 11375
+		division_template = "People's Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "3. Narodnyye Tanki"
+		location = 11375
+		division_template = "People's Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "4. Narodnyye Tanki"
+		location = 11375
+		division_template = "People's Tanks"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 6262
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 6262
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 6262
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 6262
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 3335
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 3335
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 3335
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 3335
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 121
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 121
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Kavaleriya"
+		location = 121
+		division_template = "Kavaleriya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+	division= {
+		name = "Militsiya"
+		location = 121
+		division_template = "Militsiya"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.4
+	}
+}
+	
+air_wings = {
+		
+}
