@@ -14,6 +14,8 @@ add_ideas = {
 
 	JAP_unpopular_army
 	JAP_unmodernized_industry
+	JAP_duplicate_research_efforts
+	JAP_militarism
 }
 
 if = {
@@ -183,8 +185,9 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	monarchist = 99
-	neutrality = 1
+	monarchist = 95
+	neutrality = 3
+	fascism = 2
 }
 
 create_country_leader = {
