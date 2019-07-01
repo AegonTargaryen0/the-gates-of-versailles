@@ -1,0 +1,576 @@
+focus_tree = {
+	id = soviet_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = SOV
+		}
+	}
+	
+	default = no
+
+	continuous_focus_position = { x = 0 y = 2000 }
+
+focus = {
+		id = SOV_prepare_for_the_worst
+		 #icon = #GFX_goal_generic_production
+		 x = 11
+		 y = 0
+		 cost = 10
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			add_stability = 0.05
+			custom_effect_tooltip = SOV_prepare_for_worst_tt
+		}
+	}
+
+focus = {
+		id = SOV_favor_the_workers
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_prepare_for_the_worst }
+		mutually_exclusive = { focus = SOV_strengthen_government }
+		mutually_exclusive = { focus = SOV_grand_coalition }
+		mutually_exclusive = { focus = SOV_favor_the_military }
+		mutually_exclusive = { focus = SOV_favor_royalists }
+		 x = 3
+		 y = 1
+		 cost = 5
+		 ai_will_do = {
+					factor = 100
+					}
+		completion_reward = {
+			add_political_power = -25
+			custom_effect_tooltip = SOV_favor_the_workers_tt
+		}
+	}
+
+
+focus = {
+		id = SOV_strengthen_government
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_prepare_for_the_worst }
+		 mutually_exclusive = { focus = SOV_favor_the_workers }
+		 mutually_exclusive = { focus = SOV_grand_coalition }
+		 mutually_exclusive = { focus = SOV_favor_the_military }
+		 mutually_exclusive = { focus = SOV_favor_royalists }
+		 x = 7
+		 y = 1
+		 cost = 5
+		 ai_will_do = {
+					factor = 100
+					}
+		completion_reward = {
+			add_political_power = -25
+			custom_effect_tooltip = SOV_strengthen_government_tt
+		}
+	}
+
+focus = {
+		id = SOV_grand_coalition
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_prepare_for_the_worst }
+		 mutually_exclusive = { focus = SOV_favor_the_workers }
+		 mutually_exclusive = { focus = SOV_strengthen_government }
+		 mutually_exclusive = { focus = SOV_favor_the_military }
+		 mutually_exclusive = { focus = SOV_favor_royalists }
+		 x = 11
+		 y = 1
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+		custom_effect_tooltip = SOV_grand_coalition_tt
+		
+			SOV = { country_event = {
+				days = 0
+				id = russia.3
+					}
+				}
+			add_political_power = -50
+
+		}
+	}
+
+focus = {
+		id = SOV_favor_the_military
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_prepare_for_the_worst }
+		 mutually_exclusive = { focus = SOV_favor_the_workers }
+		 mutually_exclusive = { focus = SOV_strengthen_government }
+		 mutually_exclusive = { focus = SOV_grand_coalition }
+		 mutually_exclusive = { focus = SOV_favor_royalists }
+		 x = 15
+		 y = 1
+		 cost = 5
+		 ai_will_do = {
+					factor = 100
+					}
+		completion_reward = {
+			add_political_power = -25
+			custom_effect_tooltip = SOV_favor_the_military_tt
+		}
+	}
+
+focus = {
+		id = SOV_favor_royalists
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_prepare_for_the_worst }
+		 mutually_exclusive = { focus = SOV_favor_the_workers }
+		 mutually_exclusive = { focus = SOV_strengthen_government }
+		 mutually_exclusive = { focus = SOV_grand_coalition }
+		 mutually_exclusive = { focus = SOV_favor_the_military }
+		 x = 19
+		 y = 1
+		 cost = 5
+		 ai_will_do = {
+					factor = 100
+					}
+		completion_reward = {
+			add_political_power = -25
+			custom_effect_tooltip = SOV_favor_the_royalists_tt
+		}
+	}
+
+focus = {
+		id = SOV_stock_warehouses
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_favor_the_workers }
+		 x = 2
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_stock_warehouses_tt
+		}
+	}
+
+focus = {
+		id = SOV_underground_training
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_favor_the_workers }
+		 x = 4
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_underground_training_tt
+		}
+	}
+
+focus = {
+		id = SOV_mass_strikes
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_stock_warehouses }
+		 x = 2
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			add_timed_idea = { idea = SOV_mass_strikes  days = 180 }
+		}
+	}
+
+focus = {
+		id = SOV_secret_meetings
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_underground_training }
+		 x = 4
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_secret_meetings_tt
+		}
+	}
+
+focus = {
+		id = SOV_prepare_revolution
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_secret_meetings }
+		 prerequisite = { focus = SOV_mass_strikes }
+		 x = 3
+		 y = 4
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+		custom_effect_tooltip = SOV_forshadowing_tt
+		
+		hidden_effect = {
+			country_event = {
+				days = 45
+				id = russia.6
+				}
+			}
+		}
+	}
+
+focus = {
+		id = SOV_talk_with_generals
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_strengthen_government }
+		 x = 6
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_talk_with_generals_tt
+		}
+	}
+
+focus = {
+		id = SOV_work_with_libtards
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_strengthen_government }
+		 x = 8
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.05
+			}
+		}
+	}
+
+focus = {
+		id = SOV_supply_arms
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_talk_with_generals }
+		 x = 6
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_supply_arms_tt
+		}
+	}
+
+focus = {
+		id = SOV_whats_worst_that_could_happen
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_work_with_libtards }
+		 x = 8
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+focus = {
+		id = SOV_leave_moscow
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_whats_worst_that_could_happen }
+		 prerequisite = { focus = SOV_supply_arms }
+		 x = 7
+		 y = 4
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_forshadowing_tt
+		
+		hidden_effect = {
+			country_event = {
+				days = 45
+				id = russia.7
+				}
+			}
+		}
+	}
+
+focus = {
+		id = SOV_talk_with_admirals
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_favor_the_military }
+		 x = 14
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_talk_with_admirals_tt
+		}
+	}
+
+focus = {
+		id = SOV_move_the_fleet
+		#icon = #GFX_goal_generic_production
+		prerequisite = { focus = SOV_talk_with_admirals }
+		 x = 14
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_move_the_fleet_tt
+		}
+	}
+
+focus = {
+		id = SOV.fortify.kazan
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_favor_the_military }
+		 x = 16
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+		add_political_power = -25
+		249 = {
+			if = {
+					limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = 6338
+							instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+focus = {
+		id = SOV.ready.the.urals
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV.fortify.kazan }
+		 x = 16
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_ready.the.urals_tt
+	}
+}
+
+focus = {
+		id = SOV_gather_the_veterans
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV.ready.the.urals }
+		 prerequisite = { focus = SOV_move_the_fleet }
+		 x = 15
+		 y = 4
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_forshadowing_tt
+		
+		hidden_effect = {
+			country_event = {
+				days = 45
+				id = russia.8
+				}
+			}
+	}
+}
+
+
+focus = {
+		id = SOV.talk.with.the.cossacks
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_favor_royalists }
+		 x = 18
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_talk.with.the.cossacks_tt
+		}
+	}
+
+focus = {
+		id = SOV.move.the.family
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_favor_royalists }
+		 x = 20
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_move.the.family_tt
+		}
+	}
+
+focus = {
+		id = SOV.ride.the.horses
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV.talk.with.the.cossacks }
+		 x = 18
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_ride.the.horses_tt
+		}
+	}
+
+focus = {
+		id = SOV_move_soldiers
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV.move.the.family }
+		 x = 20
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_move_the_soldiers_tt
+		}
+	}
+
+focus = {
+		id = SOV_prepare_the_tsar
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_move_soldiers }
+		 prerequisite = { focus = SOV.ride.the.horses }
+		 x = 19
+		 y = 4
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			custom_effect_tooltip = SOV_forshadowing_tt
+		
+		hidden_effect = {
+			country_event = {
+				days = 45
+				id = russia.9
+				}
+			}
+		}
+	}
+
+focus = {
+		id = SOV_work_with_radicals
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_grand_coalition }
+		 x = 11
+		 y = 2
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+			add_stability = 0.03
+		}
+	}
+
+focus = {
+		id = SOV_reshuffle_duma
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_work_with_radicals }
+		 x = 11
+		 y = 3
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			add_popularity = {
+				ideology = liberal
+				popularity = 0.03
+			}
+			add_popularity = {
+				ideology = social_democratic
+				popularity = 0.03
+			}
+			add_stability = 0.03
+		}
+	}
+
+focus = {
+		id = SOV_this_isnt_working
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_reshuffle_duma }
+		 x = 11
+		 y = 4
+		 cost = 5
+		 ai_will_do = {
+					factor = 1
+					}
+		completion_reward = {
+			SOV = { country_event = {
+				days = 0
+				id = russia.4
+					}
+				}
+		}
+	}
+
+focus = {
+		id = SOV_crisis_averted
+		 #icon = #GFX_goal_generic_production
+		 prerequisite = { focus = SOV_this_isnt_working focus = SOV_prepare_the_tsar focus = SOV_gather_the_veterans focus = SOV_leave_moscow focus = SOV_prepare_revolution }
+		 x = 11
+		 y = 5
+		 cost = 30
+		 ai_will_do = {
+					factor = 1
+					}
+		available = {
+			NOT = {
+				has_global_flag = russian_civil_war
+			}
+		}
+		completion_reward = {
+			SOV = { country_event = {
+				days = 0
+				id = russia.5
+					}
+				}
+		}
+	}
+
