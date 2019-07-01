@@ -1993,6 +1993,32 @@ spriteTypes = {
 		name = "GFX_report_event_france_october_events"
 		texturefile = "gfx/event_pictures/report_event_fra_october_events.dds"
 	}
+	#GATES OF VERSAILLES: RUSSIA EVENTS#
+
+	spriteType = {
+		name = "GFX_report_event_sov_this_isnt_working"
+		texturefile = "gfx/event_pictures/report_event_sov_this_isnt_working.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sov_destroyed_kremlin"
+		texturefile = "gfx/event_pictures/report_event_sov_destroyed_kremlin.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sov_grand_coalition"
+		texturefile = "gfx/event_pictures/report_event_sov_grand_coalition.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sov_russian_civil_war"
+		texturefile = "gfx/event_pictures/report_event_sov_russian_civil_war.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_sov_takeover_of_duma"
+		texturefile = "gfx/event_pictures/report_event_sov_takeover_of_duma.dds"
+	}
+	spriteType = {
+		name = "GFX_report_event_RUScivilwar_invasion_pics"
+		texturefile = "gfx/event_pictures/report_event_RUScivilwar_invasion_pics.dds"
+	}
 }
 	
 	
