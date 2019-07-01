@@ -628,3 +628,15 @@ D15 = {
 	color = rgb { 194 140 86 }
 	color_ui = rgb { 252 182 112 }
 }
+USR = {
+    color = rgb { 158 2 3 }
+    color_ui = rgb { 158 2 3 }
+}
+RUS = {
+    color = rgb { 91 57 6 }
+    color_ui = rgb { 91 57 6 }
+}
+TSA = {
+    color = rgb { 255 255 255 }
+    color_ui = rgb { 255 255 255 }
+}
