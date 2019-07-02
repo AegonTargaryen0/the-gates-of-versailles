@@ -13,17 +13,18 @@ focus_tree = {
 	default = no
 	
 	focus = {
-		id = BUL_reorganize_the_state 
+		id = BUL_reorganize_the_state
 		#icon = 
 		x = 14
 		y = 0
-		cost = 7
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
 		
-		completion_award =  {
-		add_tech_bonus = {
+		completion_reward = {
+		
+			add_tech_bonus = {
 				name = BUL_reorganize_the_state
 				bonus = 0.5
 				uses = 2
@@ -31,9 +32,235 @@ focus_tree = {
 			}
 		}
 	}
+	
+	focus = {
+		id = BUL_modernize_the_state
+		#icon =
+		prerequisite = { focus = BUL_reorganize_the_state }
+		x = 14
+		y = 1
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		
+		completion_reward = {
+			879 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			
+			48 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			
+			212 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_first_expand_of_millitary_factories
+		#icon = 
+		prerequisite = { focus = BUL_modernize_the_state }
+		x = 12
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1936.1.1
+		}
+			completion_reward = {
+				879 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	
+	focus = {
+		id = BUL_first_expand_of_civil_factories
+		#icon = 
+		prerequisite = { focus = BUL_modernize_the_state }
+		x = 16
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1936.1.1
+		}
+			completion_reward = {
+				878 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_invest_in_roadways
+		#icon =
+		prerequisite = { focus = BUL_modernize_the_state }
+		x = 18
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1936.1.1
+		}
+			completion_reward = {
+				48 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+				881 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+				878 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = BUL_invest_in_railways
+		#icon = 
+		prerequisite = { focus = BUL_modernize_the_state }
+		x = 10
+		y = 2
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1936.1.1
+		}
+			completion_reward = {
+				859 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+				212 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+				211 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = BUL_new_railways
+		#icon = 
+		prerequisite = { focus = BUL_invest_in_railways }
+		x = 10
+		y = 3
+		cost = 8
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		date > 1937.1.1
+		}
+			completion_reward = {
+				77 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+				879 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+				880 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+	id = BUL_new_roadways
+	#icon =
+	prerequisite = { focus = BUL_invest_in_roadways }
+	x = 18
+	y = 3
+	cost = 8
+	ai_will_do = {
+		factor = 1
+	}
+	available = {
+	date > 1937.1.1
+	}
+			completion_reward = {
+				880 = {
+					add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+				48 = {
+					add_building_construction² = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}	
+				
+
+	
 
 
 
 
 
-}
+
