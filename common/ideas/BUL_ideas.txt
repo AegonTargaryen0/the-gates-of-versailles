@@ -1,0 +1,29 @@
+ideas = {
+
+	country = {
+
+		BUL_treaty_of_neuilly = {
+	
+			allowed = {
+			original tag = BUL
+			always = yes
+			}
+		
+			allowed_civil_war = {
+			always = no
+			}
+		
+			removal_cost = -1
+		
+			#picture = 
+		
+			modifier = {
+				conscription_factor = -0.85
+				army_morale_factor = -0.6
+				training_time_army_factor = -0.5
+				defence = -0.35
+				offence = -0.75
+			}
+		}
+	}
+}
