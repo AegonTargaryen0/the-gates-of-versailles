@@ -16,6 +16,9 @@ set_technology = {
 	CAS1 = 1
 }
 
+add_ideas = {
+	BUL_treaty_of_neuilly
+}
 set_politics = {
 	ruling_party = monarchist
 	last_election = "1879.3.3"
