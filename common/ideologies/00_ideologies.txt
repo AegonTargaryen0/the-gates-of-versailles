@@ -14,9 +14,6 @@ ideologies = {
 			
 			centrist_conservative = {
 			}
-			
-			conservatism = {
-			}
 		
 			fiscal_conservatism = {
 			}
