@@ -14,9 +14,23 @@ on_startup = {
                 limit = {
                     exists = yes
                 }
+			}
        }
-    }
-}
+	   effect = {
+		FRA = {
+			set_variable = {
+			var = drift_toward_absolutism
+			value = 0
+				}
+			}
+		FRA = {
+			set_variable = {
+			var = drift_toward_parliamentary
+			value = 25
+				}
+			}
+	   }
+	}
     on_daily = {
         effect = {
             if = {
