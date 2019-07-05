@@ -1,4 +1,7 @@
 ﻿l_english:
+
+###IDEAS###
+
 FRA_fear_of_democratic_coup:0 "Fear of democratic coup"
 FRA_fear_of_democratic_coup_desc:0 "Many people are unsatisfied with the empire and wanted to go back to the republic, we simply can't let them running our country, or it will lead to a new Robespierre dictatorship."
 FRA_anti_british_propaganda:0 "Anti-British Propaganda"
@@ -8,3 +11,9 @@ FRA_germanic_ethnicity_problems_desc:0 "The North-Eastern part of the country is
 FRA_naval_competition_boost:0 "Naval competition with Great Britain"
 FRA_naval_competition_boost_desc:0 ""
 FRA_preparing_for_war:0 "Preparing for a future war"
+FRA_undecided_way_of_ruling_idea:0 "Undecided way of ruling"
+FRA_undecided_way_of_ruling_idea_desc:0 ""
+
+###DECISIONS###
+FRA_rule_with_an_iron_fist:0 "Rule with an iron fist"
+FRA_parliamentary_empire:0 "A parliamentary Empire"
