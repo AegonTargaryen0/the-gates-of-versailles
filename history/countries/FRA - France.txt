@@ -108,6 +108,7 @@ add_ideas = {
 	FRA_victors_of_wwi
 	FRA_fear_of_democratic_coup
 	FRA_germanic_ethnicity_problems
+	FRA_undecided_way_of_ruling_idea
 	limited_conscription
 }
 
