@@ -1,0 +1,93 @@
+FRA_undecided_way_of_ruling = {
+	FRA_rule_with_an_iron_fist = {
+	
+		available = {
+			check_variable = {
+			var = drift_toward_absolutism
+			value = 100
+			compare = equals
+				}
+			NOT = {
+			check_variable = {
+			var = drift_toward_parliamentary
+			value = 50
+			compare = greater_than_or_equals
+					}			
+				}
+			}
+		}
+		
+	FRA_parliamentary_empire = {
+	
+		available = {
+			check_variable = {
+			var = drift_toward_parliamentary
+			value = 100
+			compare = equals
+				}
+			NOT = {
+			check_variable = {
+			var = drift_toward_absolutism
+			value = 50
+			compare = greater_than_or_equals
+					}			
+				}
+			}
+		}
+		
+	FRA_embrace_absolutist_ideas = {
+		
+		cost = 150
+		
+		days_re_enable = 90
+		
+		complete_effect = {
+			add_to_variable = {
+			var = drift_toward_absolutism
+			value = 25
+				}
+			}
+		}
+		
+	FRA_embrace_parliamentarists_ideas = {
+		
+		cost = 150
+		
+		days_re_enable = 90
+		
+		complete_effect = {
+			add_to_variable = {
+			var = drift_toward_parliamentary
+			value = 25
+				}
+			}
+		}
+		
+	FRA_stay_away_from_absolutionists = {
+	
+		cost = 50
+		
+		days_re_enable = 45
+		
+		complete_effect = {
+			add_to_variable = {
+			var = drift_toward_absolutism
+			value = -25
+				}
+			}	
+		}
+		
+	FRA_stay_away_from_parliamentarists = {
+	
+		cost = 50
+		
+		days_re_enable = 45
+		
+		complete_effect = {
+			add_to_variable = {
+			var = drift_toward_parliamentary
+			value = -25
+				}
+			}	
+		}
+	}
