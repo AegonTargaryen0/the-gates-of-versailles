@@ -1,0 +1,10 @@
+################
+#### FRANCE ####
+################
+
+FRA_undecided_way_of_ruling = {
+	
+	allowed = {
+		original_tag = FRA
+	}
+}
