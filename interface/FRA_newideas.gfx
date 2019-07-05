@@ -19,4 +19,9 @@ spriteTypes = {
 		name = "GFX_idea_FRA_Preparing_For_War"
 		texturefile = "gfx/interface/ideas/FRA_preparingforwar.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_FRA_Undecided_Way_Ruling"
+		texturefile = "gfx/interface/ideas/FRA_undecidedwayofruling.dds"
+	}
 }
