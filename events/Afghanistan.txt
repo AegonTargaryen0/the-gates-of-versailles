@@ -1,4 +1,6 @@
-################### EVENTS FOR AFGHANISTAN
+﻿################### EVENTS FOR AFGHANISTAN
+
+add_namespace = afghanistan
 
 ##### Maybe we need to reform the military
 country_event = {  #Some Stupid Shit
